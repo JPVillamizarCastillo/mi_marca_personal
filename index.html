@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visible | Marca Personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Visible</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#" class="nav__link">Nosotros</a></li>
+          <li class="nav__item--dropdown">
+            <a href="#" class="nav__link nav__link--dropdown">
+              Servicios
+              <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="dropdown">
+              <li><a href="#" class="dropdown__link">Personas</a></li>
+              <li><a href="#" class="dropdown__link">Empresas</a></li>
+              <li><a href="#" class="dropdown__link">Conferencias</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav__link">Academy</a></li>
+          <li><a href="#" class="nav__link">Newsletter</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn--cta header__cta">HABLEMOS</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+          Una buena marca te permite<br class="hero__break" />
+          nuevos trabajos<span class="cursor">_</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          Tu marca personal tiene todo el potencial de abrir puertas sin que haya que tocarlas.
+        </p>
+
+        <a href="#" class="btn btn--primary hero__cta">Ver Servicios</a>
+
+        <p class="hero__text">
+          Ayudamos a las personas y las organizaciones a desbloquear un mundo de oportunidades a través de la marca personal.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.nav__item--dropdown > .nav__link--dropdown').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          link.closest('.nav__item--dropdown').classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
