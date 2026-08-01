@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflexiones Financieras | Juan Pablo Villamizar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== Reflexiones Financieras (página dedicada) ===== */
+    .reflexiones-page {
+      padding: 100px 0 140px;
+    }
+
+    .reflexion-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .filter-btn {
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background-color: transparent;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 22px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: rgba(217, 255, 63, 0.35);
+      color: var(--text-primary);
+    }
+
+    .filter-btn.is-active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background-color: rgba(217, 255, 63, 0.08);
+    }
+
+    .reflexiones-pagination {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .load-more-btn {
+      padding: 14px 32px;
+      font-size: 0.95rem;
+    }
+
+    .reflexiones-count {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .reflexiones-page {
+        padding: 80px 0 100px;
+      }
+
+      .reflexion-filters {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .filter-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .load-more-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Juan Pablo Villamizar" class="logo__img" />
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="index.html#" class="nav__link">Nosotros</a></li>
+          <li class="nav__item--dropdown">
+            <a href="#" class="nav__link nav__link--dropdown">
+              Servicios
+              <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="dropdown">
+              <li><a href="index.html#" class="dropdown__link">Personas</a></li>
+              <li><a href="index.html#" class="dropdown__link">Empresas</a></li>
+              <li><a href="index.html#" class="dropdown__link">Conferencias</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#" class="nav__link">Academy</a></li>
+          <li><a href="#reflexiones-financieras" class="nav__link">Reflexiones Financieras</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="btn btn--cta header__cta" id="openContactModal">HABLEMOS</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="reflexiones-financieras reflexiones-page" id="reflexiones-financieras">
+      <div class="container">
+        <div class="reflexiones__header">
+          <h1 class="reflexiones__title">Reflexiones Financieras</h1>
+          <p class="reflexiones__subtitle">Estrategia antes que producto</p>
+        </div>
+
+        <div class="reflexion-filters" id="reflexionFilters">
+          <button type="button" class="filter-btn is-active" data-filter="todos">Todos</button>
+          <button type="button" class="filter-btn" data-filter="psicologia">Psicología del Dinero</button>
+          <button type="button" class="filter-btn" data-filter="estrategia">Estrategia Patrimonial</button>
+          <button type="button" class="filter-btn" data-filter="experiencia">Experiencia Personal</button>
+        </div>
+
+        <div class="reflexiones__list" id="reflexionesList"></div>
+
+        <div class="reflexiones-pagination">
+          <button type="button" class="btn btn--outline load-more-btn" id="loadMoreBtn">Cargar más reflexiones</button>
+          <p class="reflexiones-count" id="reflexionesCount">Mostrando 0 de 0 reflexiones</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#" class="footer__brand">Juan Pablo Villamizar Castillo</a>
+        <a href="mailto:jpvillamizar@fp.skandia.com.co" class="footer__email">jpvillamizar@fp.skandia.com.co</a>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Servicios</h3>
+        <ul class="footer__list">
+          <li><a href="index.html#" class="footer__link">Sobre Visible</a></li>
+          <li><a href="index.html#" class="footer__link">Servicios</a></li>
+          <li><a href="index.html#" class="footer__link">Charlas / Talleres</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Enlaces</h3>
+        <ul class="footer__list">
+          <li><a href="index.html#" class="footer__link">Nosotros</a></li>
+          <li><a href="index.html#" class="footer__link">Blog</a></li>
+          <li><a href="index.html#" class="footer__link">Personas</a></li>
+          <li><a href="index.html#" class="footer__link">Empresas</a></li>
+          <li><a href="index.html#" class="footer__link">Conferencias</a></li>
+          <li><a href="index.html#" class="footer__link">Academy</a></li>
+          <li><a href="reflexiones-financieras.html" class="footer__link">Newsletter</a></li>
+          <li><a href="index.html#" class="footer__link">Políticas de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="contactModalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+      <button type="button" class="modal__close" id="closeContactModal" aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <h2 class="modal__title" id="contactModalTitle">Ponte en contacto</h2>
+      <p class="modal__subtitle">Cuéntanos sobre tu proyecto y te contactaremos a la brevedad.</p>
+
+      <form class="modal__form" id="contactForm">
+        <div class="form-group">
+          <label for="fullName">Nombre Completo</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/tu-perfil" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">¿Cómo te podemos ayudar?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <label class="checkbox-group">
+          <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required />
+          <span>He leído y acepto las <a href="#" class="inline-link">políticas de privacidad</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn--cta modal__submit">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.nav__item--dropdown > .nav__link--dropdown').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          link.closest('.nav__item--dropdown').classList.toggle('is-open');
+        }
+      });
+    });
+
+    const contactModalOverlay = document.getElementById('contactModalOverlay');
+    const openContactModal = document.getElementById('openContactModal');
+    const closeContactModal = document.getElementById('closeContactModal');
+
+    const openModal = () => {
+      contactModalOverlay.classList.add('is-open');
+      document.body.classList.add('modal-open');
+    };
+
+    const closeModal = () => {
+      contactModalOverlay.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+    };
+
+    openContactModal.addEventListener('click', openModal);
+    closeContactModal.addEventListener('click', closeModal);
+
+    contactModalOverlay.addEventListener('click', (e) => {
+      if (e.target === contactModalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && contactModalOverlay.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = 'ENVIANDO...';
+      submitBtn.disabled = true;
+
+      // Reemplaza esta URL con la tuya de Google Apps Script
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHT7zYtWZRDqIqQ-Z_yzwOs47rKaZ9F3GA0aGe3IZ6wIFYPAkXJtQAMqJR0zdX5Y1I7g/exec';
+
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        linkedin: document.getElementById('linkedin').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
+        alert('¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.');
+        e.target.reset();
+        closeModal();
+      })
+      .catch((error) => {
+        alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo.');
+        console.error('Error:', error);
+      })
+      .finally(() => {
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+
+    /* ===== Reflexiones Financieras: datos, filtros y paginación ===== */
+    const reflexionesData = [
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un horizonte de tiempo mal definido es apostar, no invertir', excerpt: 'La misma plata puede ir en un producto totalmente distinto si la necesitas en un año o en quince. El horizonte de tiempo, no el producto de moda, es lo que debería definir dónde pones tu dinero.', date: '8 de marzo, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'El FOMO no paga deudas, las crea', excerpt: 'Comprar algo porque "todo el mundo lo tiene" es la forma más cara de sentirse incluido. El consumo impulsivo por FOMO no es un problema de plata, es un problema de decisiones tomadas con el estómago y no con la cabeza.', date: '15 de marzo, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'El primer sueldo que gané completo me lo gasté completo, y esa fue mi mejor lección', excerpt: 'Nadie nace sabiendo manejar plata. Yo aprendí a los golpes, gastando lo que no debía, y esa vergüenza de después fue la que me hizo empezar a tomarme esto en serio.', date: '14 de marzo, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'La tarjeta de crédito no es plata, es un préstamo que te haces a ti mismo con intereses', excerpt: 'Mucha gente vive como si el cupo disponible fuera dinero propio. Spoiler: no lo es, y el banco sí te va a cobrar por prestártelo.', date: '27 de marzo, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Primero la estrategia, después el producto', excerpt: 'Todo el mundo pregunta "¿en qué invierto?" antes de preguntar "¿para qué estoy invirtiendo?". El producto financiero es la herramienta, no el plan. Sin estrategia patrimonial, hasta la mejor inversión termina siendo un tiro al aire.', date: '2 de abril, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Cambié un carro nuevo por un plan de inversión y hoy es la mejor decisión que he tomado', excerpt: 'En su momento sentí que me estaba perdiendo algo. Con el tiempo entendí que estaba comprando algo mucho más valioso: opciones a futuro.', date: '6 de abril, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Gastarte el bono en un asado no te hace pobre, pero repetirlo cada mes sí', excerpt: 'Un gusto de vez en cuando no arruina a nadie. El problema es cuando el gusto se vuelve rutina y la rutina se come el ahorro antes de que exista.', date: '5 de abril, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Diversificar no es tener plata en cuatro bancos distintos', excerpt: 'Diversificar es repartir el riesgo entre activos que no se mueven igual. Tener la misma plata regada en cuentas de ahorro distintas sigue siendo el mismo riesgo, solo que más incómodo de administrar.', date: '20 de abril, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi primer cliente me enseñó más de finanzas personales que cualquier certificación', excerpt: 'Ver de cerca cómo alguien maneja su plata, sus miedos y sus excusas te enseña cosas que ningún curso te va a dar.', date: '29 de abril, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Comparar tu plata con la de tu primo en Instagram es el peor negocio que vas a hacer', excerpt: 'Nadie publica las deudas, solo el viaje. Medir tu progreso financiero contra un feed editado es una trampa que te hace tomar decisiones malas por envidia.', date: '18 de abril, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La declaración de renta no es un problema, es información que estás dejando sobre la mesa', excerpt: 'La mayoría solo declara para cumplir. Pocos la usan para planear. Ahí está la diferencia entre pagar lo que toca y pagar más de lo que toca.', date: '12 de mayo, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: "Ahorrar 'lo que sobra' es la razón por la que nunca sobra nada", excerpt: 'Si esperas a fin de mes para ver qué quedó, casi siempre no queda nada. El ahorro que funciona es el que se aparta primero, no el que sobrevive al gasto.', date: '10 de mayo, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'A los 25 años el tiempo trabaja para ti, no lo desperdicies', excerpt: 'Nadie te lo dice a tiempo: la mayor ventaja que tiene un profesional joven no es el salario, es el tiempo. Empezar a construir patrimonio diez años antes que el resto no se recupera con más ingresos después.', date: '20 de mayo, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Le tuve miedo a invertir hasta que entendí que no invertir también es una decisión, y una cara', excerpt: 'Guardar todo en una cuenta de ahorros se siente seguro, pero la inflación se está comiendo esa plata todos los meses sin que lo notes.', date: '22 de mayo, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La sucesión no se planea cuando ya es urgente, se planea cuando todavía no hace falta', excerpt: 'Nadie quiere hablar de esto, pero un patrimonio sin planeación sucesoral termina resuelto por un juzgado y no por la familia.', date: '30 de mayo, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'El billete de $50.000 que te da pereza cambiar es el mismo que se te va sin pensar', excerpt: 'Cuando el dinero se siente "chiquito" lo gastamos distinto que cuando lo vemos completo. Por eso una transferencia de $200.000 duele más que cuatro compras de $50.000, aunque sea la misma plata.', date: '2 de junio, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un fondo de emergencia no es plata perdida, es plata que te compra tiempo', excerpt: 'El fondo de emergencia no rinde como una inversión y esa no es su función. Su función es que una urgencia no te obligue a vender lo que sí está construyendo patrimonio.', date: '4 de junio, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Aprendí a decir que no a un plan social por cuidar mi meta de ahorro, y no me arrepiento', excerpt: 'Al principio se siente raro quedar por fuera. Después entiendes que cada no que dices hoy es un sí que le estás dando a tu yo del futuro.', date: '15 de junio, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Sentirte culpable por gastar en ti no es disciplina financiera, es mala relación con la plata', excerpt: 'Hay gente que ahorra por miedo, no por meta. Ese miedo tarde o temprano se revienta en una compra impulsiva que compensa meses de restricción.', date: '25 de junio, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Tener patrimonio no es tener un sueldo alto, es tener un plan detrás de ese sueldo', excerpt: 'Conozco gente que gana muy bien y no tiene nada construido, y gente que gana la mitad y ya tiene un plan patrimonial sólido. La diferencia nunca fue el ingreso.', date: '27 de junio, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi papá me enseñó a ahorrar, pero yo tuve que aprender solo a invertir', excerpt: 'Ahorrar y proteger la plata era la lección de su generación. Hacer que esa plata crezca es la que me tocó aprender a mí, y no fue fácil.', date: '8 de julio, 2026' },
+      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Nadie te enseñó a manejar la plata, por eso la manejas con culpa o con excusas', excerpt: 'La educación financiera no llegó a la casa de la mayoría. No es falta de fuerza de voluntad, es falta de información. Ese es el primer permiso que te tienes que dar.', date: '17 de julio, 2026' },
+      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'El seguro de vida no es un gasto, es la única inversión que protege todas las demás', excerpt: 'Si algo te pasa, todo lo que construiste puede quedar en riesgo si no hay una cobertura detrás. Proteger el patrimonio es tan importante como construirlo.', date: '19 de julio, 2026' },
+      { category: 'experiencia', badge: 'Experiencia Personal', title: 'El día que dejé de comparar mi progreso financiero con el de mis amigos, empecé a avanzar de verdad', excerpt: 'Cada quien tiene un punto de partida distinto. Compararte constantemente solo te distrae de construir tu propio camino.', date: '31 de julio, 2026' }
+    ];
+
+    const PAGE_SIZE = 6;
+    let currentFilter = 'todos';
+    let visibleCount = PAGE_SIZE;
+
+    const reflexionesListEl = document.getElementById('reflexionesList');
+    const reflexionesCountEl = document.getElementById('reflexionesCount');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    function getFilteredReflexiones() {
+      if (currentFilter === 'todos') return reflexionesData;
+      return reflexionesData.filter((r) => r.category === currentFilter);
+    }
+
+    function cardTemplate(r) {
+      return `
+        <article class="reflexion-card">
+          <span class="reflexion-card__badge">${r.badge}</span>
+          <h3 class="reflexion-card__title">${r.title}</h3>
+          <p class="reflexion-card__excerpt">${r.excerpt}</p>
+          <time class="reflexion-card__date">${r.date}</time>
+        </article>
+      `;
+    }
+
+    function renderReflexiones() {
+      const filtered = getFilteredReflexiones();
+      const visible = filtered.slice(0, visibleCount);
+
+      reflexionesListEl.innerHTML = visible.map(cardTemplate).join('');
+      reflexionesCountEl.textContent = `Mostrando ${visible.length} de ${filtered.length} reflexiones`;
+      loadMoreBtn.style.display = visibleCount >= filtered.length ? 'none' : 'inline-flex';
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        currentFilter = btn.dataset.filter;
+        visibleCount = PAGE_SIZE;
+        renderReflexiones();
+      });
+    });
+
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount += PAGE_SIZE;
+      renderReflexiones();
+    });
+
+    renderReflexiones();
+  </script>
+
+</body>
+</html>
