@@ -397,7 +397,7 @@
 
     /* ===== Reflexiones Financieras: datos, filtros y paginación ===== */
     const reflexionesData = [
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un horizonte de tiempo mal definido es apostar, no invertir', excerpt: 'La misma plata puede ir en un producto totalmente distinto si la necesitas en un año o en quince. El horizonte de tiempo, no el producto de moda, es lo que debería definir dónde pones tu dinero.', date: '8 de marzo, 2026',
+      { id: '2026-03-08', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un horizonte de tiempo mal definido es apostar, no invertir', excerpt: 'La misma plata puede ir en un producto totalmente distinto si la necesitas en un año o en quince. El horizonte de tiempo, no el producto de moda, es lo que debería definir dónde pones tu dinero.', date: '8 de marzo, 2026',
         dateSortValue: '2026-03-08',
         contenido_completo: [
           "Cuando alguien me pregunta dónde meter la plata, lo primero que le pregunto yo es: ¿para cuándo la necesitas? No para qué la quieres ahorrar, sino en qué momento del calendario esa plata tiene que estar disponible. Esa pregunta cambia todo. La misma cantidad de pesos, digamos diez millones, puede ir en un fondo de renta variable si los vas a necesitar en quince años, o puede ir en un CDT a noventa días si los necesitas en tres meses para la cuota inicial de un apartamento. El producto no es lo primero que se decide, es lo último.",
@@ -406,7 +406,7 @@
           "Antes de preguntar en qué invertir, pregúntate para cuándo. Esa sola pregunta te va a sacar de la mitad de los errores financieros que la gente comete por afán de rentabilidad."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'El FOMO no paga deudas, las crea', excerpt: 'Comprar algo porque "todo el mundo lo tiene" es la forma más cara de sentirse incluido. El consumo impulsivo por FOMO no es un problema de plata, es un problema de decisiones tomadas con el estómago y no con la cabeza.', date: '15 de marzo, 2026',
+      { id: '2026-03-15', category: 'psicologia', badge: 'Psicología del Dinero', title: 'El FOMO no paga deudas, las crea', excerpt: 'Comprar algo porque "todo el mundo lo tiene" es la forma más cara de sentirse incluido. El consumo impulsivo por FOMO no es un problema de plata, es un problema de decisiones tomadas con el estómago y no con la cabeza.', date: '15 de marzo, 2026',
         dateSortValue: '2026-03-15',
         contenido_completo: [
           "El FOMO —esa sigla en inglés que significa 'miedo a quedarte por fuera'— es uno de los motores de consumo más caros que existen, y casi nadie lo identifica como tal. No es que necesites ese celular nuevo, esas zapatillas o ese viaje. Es que tu cerebro te está diciendo que si no lo tienes, te vas a quedar por fuera de algo importante. Y contra ese miedo, la lógica financiera no tiene ninguna oportunidad.",
@@ -415,7 +415,7 @@
           "No se trata de no darte gustos, se trata de que el gusto sea una decisión tuya y no una reacción al miedo de quedarte por fuera. Cuando compras desde el miedo, casi siempre compras mal."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'El primer sueldo que gané completo me lo gasté completo, y esa fue mi mejor lección', excerpt: 'Nadie nace sabiendo manejar plata. Yo aprendí a los golpes, gastando lo que no debía, y esa vergüenza de después fue la que me hizo empezar a tomarme esto en serio.', date: '14 de marzo, 2026',
+      { id: '2026-03-14', category: 'experiencia', badge: 'Experiencia Personal', title: 'El primer sueldo que gané completo me lo gasté completo, y esa fue mi mejor lección', excerpt: 'Nadie nace sabiendo manejar plata. Yo aprendí a los golpes, gastando lo que no debía, y esa vergüenza de después fue la que me hizo empezar a tomarme esto en serio.', date: '14 de marzo, 2026',
         dateSortValue: '2026-03-14',
         contenido_completo: [
           "Me acuerdo perfecto de mi primera quincena completa. Era una cifra que hasta ese momento me parecía enorme, y sentí que por fin tenía el control total sobre algo mío. El problema es que confundí tener el control con no necesitar ningún plan.",
@@ -424,7 +424,7 @@
           "Nadie nace sabiendo administrar dinero. A mí me tocó aprenderlo a los golpes, gastándome lo que no debía y sintiendo esa incomodidad después. Si te ha pasado algo parecido, no es que seas malo con la plata, es que nadie te enseñó antes de que la tuvieras en la mano."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'La tarjeta de crédito no es plata, es un préstamo que te haces a ti mismo con intereses', excerpt: 'Mucha gente vive como si el cupo disponible fuera dinero propio. Spoiler: no lo es, y el banco sí te va a cobrar por prestártelo.', date: '27 de marzo, 2026',
+      { id: '2026-03-27', category: 'psicologia', badge: 'Psicología del Dinero', title: 'La tarjeta de crédito no es plata, es un préstamo que te haces a ti mismo con intereses', excerpt: 'Mucha gente vive como si el cupo disponible fuera dinero propio. Spoiler: no lo es, y el banco sí te va a cobrar por prestártelo.', date: '27 de marzo, 2026',
         dateSortValue: '2026-03-27',
         contenido_completo: [
           "Hay una confusión que le cuesta muchísimo dinero a la gente: pensar que el cupo disponible de la tarjeta es plata propia. No lo es. Es un préstamo que el banco te está ofreciendo, con una tasa de interés que en Colombia puede superar fácilmente el 25% efectivo anual.",
@@ -433,7 +433,7 @@
           "El banco no te está regalando nada cuando te sube el cupo. Te está prestando más confiado en que vas a pagar los intereses. Entender eso es el primer paso para que la tarjeta trabaje para ti y no al revés."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Primero la estrategia, después el producto', excerpt: 'Todo el mundo pregunta "¿en qué invierto?" antes de preguntar "¿para qué estoy invirtiendo?". El producto financiero es la herramienta, no el plan. Sin estrategia patrimonial, hasta la mejor inversión termina siendo un tiro al aire.', date: '2 de abril, 2026',
+      { id: '2026-04-02', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Primero la estrategia, después el producto', excerpt: 'Todo el mundo pregunta "¿en qué invierto?" antes de preguntar "¿para qué estoy invirtiendo?". El producto financiero es la herramienta, no el plan. Sin estrategia patrimonial, hasta la mejor inversión termina siendo un tiro al aire.', date: '2 de abril, 2026',
         dateSortValue: '2026-04-02',
         contenido_completo: [
           "La pregunta que más me hacen en una primera reunión es '¿en qué invierto?'. Y casi siempre mi respuesta los descoloca un poco, porque antes de contestar les pregunto: '¿para qué estás invirtiendo?'. Esa pregunta casi nadie se la ha hecho a sí mismo antes.",
@@ -442,7 +442,7 @@
           "Voltea la pregunta la próxima vez: en vez de preguntar en qué invertir, pregúntate para qué. El producto se escoge después, cuando ya sabes exactamente qué papel tiene que cumplir dentro de tu plan."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Cambié un carro nuevo por un plan de inversión y hoy es la mejor decisión que he tomado', excerpt: 'En su momento sentí que me estaba perdiendo algo. Con el tiempo entendí que estaba comprando algo mucho más valioso: opciones a futuro.', date: '6 de abril, 2026',
+      { id: '2026-04-06', category: 'experiencia', badge: 'Experiencia Personal', title: 'Cambié un carro nuevo por un plan de inversión y hoy es la mejor decisión que he tomado', excerpt: 'En su momento sentí que me estaba perdiendo algo. Con el tiempo entendí que estaba comprando algo mucho más valioso: opciones a futuro.', date: '6 de abril, 2026',
         dateSortValue: '2026-04-06',
         contenido_completo: [
           "Tenía la cuota inicial lista para un carro nuevo. Ya lo había cotizado, ya me había imaginado manejándolo, ya hasta le tenía color escogido. Y unas semanas antes de firmar, decidí meter esa plata en un plan de inversión en su lugar.",
@@ -451,7 +451,7 @@
           "Hoy sigo sin el carro nuevo, pero tengo algo que en su momento no valoraba igual: margen de maniobra. Poder decidir cosas sin que la plata sea la limitante. Esa es la diferencia entre gastar en algo que se devalúa y construir algo que crece."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Gastarte el bono en un asado no te hace pobre, pero repetirlo cada mes sí', excerpt: 'Un gusto de vez en cuando no arruina a nadie. El problema es cuando el gusto se vuelve rutina y la rutina se come el ahorro antes de que exista.', date: '5 de abril, 2026',
+      { id: '2026-04-05', category: 'psicologia', badge: 'Psicología del Dinero', title: 'Gastarte el bono en un asado no te hace pobre, pero repetirlo cada mes sí', excerpt: 'Un gusto de vez en cuando no arruina a nadie. El problema es cuando el gusto se vuelve rutina y la rutina se come el ahorro antes de que exista.', date: '5 de abril, 2026',
         dateSortValue: '2026-04-05',
         contenido_completo: [
           "No hay nada malo en gastarte un bono en un asado con la familia o los amigos. Ese gusto, de vez en cuando, hace parte de vivir bien y no tiene por qué generar culpa.",
@@ -460,7 +460,7 @@
           "La solución no es dejar de disfrutar los extras, es decidir de antemano qué porcentaje de ese bono se va al gusto y qué porcentaje se va al plan. Cuando lo decides antes de que llegue la plata, el gusto sigue siendo gusto y no se come el futuro."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Diversificar no es tener plata en cuatro bancos distintos', excerpt: 'Diversificar es repartir el riesgo entre activos que no se mueven igual. Tener la misma plata regada en cuentas de ahorro distintas sigue siendo el mismo riesgo, solo que más incómodo de administrar.', date: '20 de abril, 2026',
+      { id: '2026-04-20', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Diversificar no es tener plata en cuatro bancos distintos', excerpt: 'Diversificar es repartir el riesgo entre activos que no se mueven igual. Tener la misma plata regada en cuentas de ahorro distintas sigue siendo el mismo riesgo, solo que más incómodo de administrar.', date: '20 de abril, 2026',
         dateSortValue: '2026-04-20',
         contenido_completo: [
           "Uno de los errores más comunes que veo es gente que cree que está diversificada porque tiene plata regada en tres o cuatro bancos distintos. Esa no es diversificación, es solo la misma exposición al riesgo repartida en más sitios, con la incomodidad extra de tener que administrar varias cuentas.",
@@ -469,7 +469,7 @@
           "Antes de sentirte tranquilo por tener la plata 'repartida', pregúntate si de verdad está repartida en riesgos distintos o solo en cuentas distintas del mismo riesgo. La diferencia entre esas dos cosas es la diferencia entre estar protegido y sentirte protegido."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi primer cliente me enseñó más de finanzas personales que cualquier certificación', excerpt: 'Ver de cerca cómo alguien maneja su plata, sus miedos y sus excusas te enseña cosas que ningún curso te va a dar.', date: '29 de abril, 2026',
+      { id: '2026-04-29', category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi primer cliente me enseñó más de finanzas personales que cualquier certificación', excerpt: 'Ver de cerca cómo alguien maneja su plata, sus miedos y sus excusas te enseña cosas que ningún curso te va a dar.', date: '29 de abril, 2026',
         dateSortValue: '2026-04-29',
         contenido_completo: [
           "Mi primer cliente no llegó con una situación complicada en términos técnicos. Llegó con miedo. Miedo a hablar de plata, miedo a admitir que no tenía ni idea de en qué estaba metido su dinero, miedo a que lo juzgaran por las decisiones que había tomado antes.",
@@ -478,7 +478,7 @@
           "Esa primera experiencia me enseñó que mi trabajo no es solo recomendar productos, es ayudar a que la gente entienda su propia relación con el dinero. Eso no se aprende en un diplomado, se aprende sentado al frente de una persona real con miedos reales."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Comparar tu plata con la de tu primo en Instagram es el peor negocio que vas a hacer', excerpt: 'Nadie publica las deudas, solo el viaje. Medir tu progreso financiero contra un feed editado es una trampa que te hace tomar decisiones malas por envidia.', date: '18 de abril, 2026',
+      { id: '2026-04-18', category: 'psicologia', badge: 'Psicología del Dinero', title: 'Comparar tu plata con la de tu primo en Instagram es el peor negocio que vas a hacer', excerpt: 'Nadie publica las deudas, solo el viaje. Medir tu progreso financiero contra un feed editado es una trampa que te hace tomar decisiones malas por envidia.', date: '18 de abril, 2026',
         dateSortValue: '2026-04-18',
         contenido_completo: [
           "Comparar tu situación financiera con lo que ves en Instagram es, probablemente, el negocio más malo que puedas hacer con tu cabeza. Y digo negocio porque termina costándote plata real, aunque la comparación sea completamente imaginaria.",
@@ -487,7 +487,7 @@
           "Tu plan financiero se mide contra tus propias metas, no contra el feed de nadie. El día que dejas de correr esa carrera imaginaria, empiezas a tomar decisiones con la cabeza fría y no con el estómago apretado por la envidia."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La declaración de renta no es un problema, es información que estás dejando sobre la mesa', excerpt: 'La mayoría solo declara para cumplir. Pocos la usan para planear. Ahí está la diferencia entre pagar lo que toca y pagar más de lo que toca.', date: '12 de mayo, 2026',
+      { id: '2026-05-12', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La declaración de renta no es un problema, es información que estás dejando sobre la mesa', excerpt: 'La mayoría solo declara para cumplir. Pocos la usan para planear. Ahí está la diferencia entre pagar lo que toca y pagar más de lo que toca.', date: '12 de mayo, 2026',
         dateSortValue: '2026-05-12',
         contenido_completo: [
           "La mayoría de la gente ve la declaración de renta como un trámite molesto que toca hacer una vez al año y ya. Cumplir, entregar, y olvidarse hasta el próximo abril. Ese enfoque deja plata sobre la mesa todos los años.",
@@ -496,7 +496,7 @@
           "La diferencia entre alguien que declara para cumplir y alguien que declara para planear es la diferencia entre pagar lo que toca y pagar más de lo que en realidad debía. Esa segunda opción es completamente evitable con un poco de anticipación."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: "Ahorrar 'lo que sobra' es la razón por la que nunca sobra nada", excerpt: 'Si esperas a fin de mes para ver qué quedó, casi siempre no queda nada. El ahorro que funciona es el que se aparta primero, no el que sobrevive al gasto.', date: '10 de mayo, 2026',
+      { id: '2026-05-10', category: 'psicologia', badge: 'Psicología del Dinero', title: "Ahorrar 'lo que sobra' es la razón por la que nunca sobra nada", excerpt: 'Si esperas a fin de mes para ver qué quedó, casi siempre no queda nada. El ahorro que funciona es el que se aparta primero, no el que sobrevive al gasto.', date: '10 de mayo, 2026',
         dateSortValue: '2026-05-10',
         contenido_completo: [
           "Si tu método de ahorro es esperar a fin de mes para ver qué sobró, ya perdiste antes de empezar. Casi siempre, para cuando llega esa fecha, no sobra nada, y no porque ganes poco, sino porque el gasto siempre se expande hasta llenar todo el espacio disponible.",
@@ -505,7 +505,7 @@
           "No se trata de tener más disciplina, se trata de cambiar el orden de las operaciones. Ahorra primero, gasta lo que queda después. Ese cambio de orden, aunque suene simple, es la diferencia entre construir algo y quedarte esperando que algún mes sobre."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'A los 25 años el tiempo trabaja para ti, no lo desperdicies', excerpt: 'Nadie te lo dice a tiempo: la mayor ventaja que tiene un profesional joven no es el salario, es el tiempo. Empezar a construir patrimonio diez años antes que el resto no se recupera con más ingresos después.', date: '20 de mayo, 2026',
+      { id: '2026-05-20', category: 'experiencia', badge: 'Experiencia Personal', title: 'A los 25 años el tiempo trabaja para ti, no lo desperdicies', excerpt: 'Nadie te lo dice a tiempo: la mayor ventaja que tiene un profesional joven no es el salario, es el tiempo. Empezar a construir patrimonio diez años antes que el resto no se recupera con más ingresos después.', date: '20 de mayo, 2026',
         dateSortValue: '2026-05-20',
         contenido_completo: [
           "Nadie te lo dice a tiempo, y por eso lo repito cada vez que puedo: la mayor ventaja que tiene un profesional joven no es cuánto gana, es cuánto tiempo tiene por delante. Y esa ventaja se desperdicia fácil si nadie te explica cómo usarla.",
@@ -514,7 +514,7 @@
           "Empezar a construir patrimonio diez años antes que el resto no se recupera después con más ingresos. El tiempo perdido en este juego específico no se compra con plata, así que si tienes 25 años y estás leyendo esto, esa es tu ventaja más grande ahora mismo."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Le tuve miedo a invertir hasta que entendí que no invertir también es una decisión, y una cara', excerpt: 'Guardar todo en una cuenta de ahorros se siente seguro, pero la inflación se está comiendo esa plata todos los meses sin que lo notes.', date: '22 de mayo, 2026',
+      { id: '2026-05-22', category: 'experiencia', badge: 'Experiencia Personal', title: 'Le tuve miedo a invertir hasta que entendí que no invertir también es una decisión, y una cara', excerpt: 'Guardar todo en una cuenta de ahorros se siente seguro, pero la inflación se está comiendo esa plata todos los meses sin que lo notes.', date: '22 de mayo, 2026',
         dateSortValue: '2026-05-22',
         contenido_completo: [
           "Durante años tuve toda mi plata guardada en una cuenta de ahorros. Me sentía tranquilo viéndola ahí, quieta, sin moverse, sin riesgo aparente. Pensaba que no invertir era la opción segura, la que no me podía salir mal.",
@@ -523,7 +523,7 @@
           "Hoy sigo respetando el riesgo, pero ya no le tengo miedo a moverme. El miedo real no era invertir mal, era quedarme quieto pensando que quedarme quieto no tenía costo."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La sucesión no se planea cuando ya es urgente, se planea cuando todavía no hace falta', excerpt: 'Nadie quiere hablar de esto, pero un patrimonio sin planeación sucesoral termina resuelto por un juzgado y no por la familia.', date: '30 de mayo, 2026',
+      { id: '2026-05-30', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'La sucesión no se planea cuando ya es urgente, se planea cuando todavía no hace falta', excerpt: 'Nadie quiere hablar de esto, pero un patrimonio sin planeación sucesoral termina resuelto por un juzgado y no por la familia.', date: '30 de mayo, 2026',
         dateSortValue: '2026-05-30',
         contenido_completo: [
           "De sucesión casi nadie quiere hablar. Se siente un tema incómodo, casi de mal augurio, y por eso se aplaza una y otra vez hasta que ya es tarde para planearla con calma.",
@@ -532,7 +532,7 @@
           "Planear la sucesión no es hablar de la muerte, es hablar de claridad para las personas que uno más quiere. Se planea precisamente cuando no hace falta todavía, porque cuando hace falta, ya no hay tiempo para hacerlo bien."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'El billete de $50.000 que te da pereza cambiar es el mismo que se te va sin pensar', excerpt: 'Cuando el dinero se siente "chiquito" lo gastamos distinto que cuando lo vemos completo. Por eso una transferencia de $200.000 duele más que cuatro compras de $50.000, aunque sea la misma plata.', date: '2 de junio, 2026',
+      { id: '2026-06-02', category: 'psicologia', badge: 'Psicología del Dinero', title: 'El billete de $50.000 que te da pereza cambiar es el mismo que se te va sin pensar', excerpt: 'Cuando el dinero se siente "chiquito" lo gastamos distinto que cuando lo vemos completo. Por eso una transferencia de $200.000 duele más que cuatro compras de $50.000, aunque sea la misma plata.', date: '2 de junio, 2026',
         dateSortValue: '2026-06-02',
         contenido_completo: [
           "Hay un sesgo mental curioso: cuando el dinero se ve en billetes 'chiquitos', lo gastamos con mucha más facilidad que cuando lo vemos como una cifra completa. Un billete de $50.000 se siente manejable, casi desechable, y por eso cuesta menos trabajo soltarlo.",
@@ -541,7 +541,7 @@
           "La solución no es dejar de gastar en esas cosas, es sumar el gasto real cada cierto tiempo y verlo en conjunto, no en fragmentos. Cuando ves la cifra completa, el cerebro por fin reacciona igual que si fuera una sola transferencia grande."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un fondo de emergencia no es plata perdida, es plata que te compra tiempo', excerpt: 'El fondo de emergencia no rinde como una inversión y esa no es su función. Su función es que una urgencia no te obligue a vender lo que sí está construyendo patrimonio.', date: '4 de junio, 2026',
+      { id: '2026-06-04', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un fondo de emergencia no es plata perdida, es plata que te compra tiempo', excerpt: 'El fondo de emergencia no rinde como una inversión y esa no es su función. Su función es que una urgencia no te obligue a vender lo que sí está construyendo patrimonio.', date: '4 de junio, 2026',
         dateSortValue: '2026-06-04',
         contenido_completo: [
           "Muchas personas me preguntan por qué su fondo de emergencia rinde tan poco comparado con otras inversiones que tienen. La respuesta es simple: esa no es su función. El fondo de emergencia no está ahí para crecer, está ahí para estar disponible cuando lo necesites, sin condiciones ni penalidades.",
@@ -550,7 +550,7 @@
           "El fondo de emergencia no es plata perdida, es plata que compra tranquilidad y tiempo. Y ese tiempo es justamente lo que te permite que el resto de tu plan patrimonial no se vea afectado cuando la vida, como siempre, te sorprende."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Aprendí a decir que no a un plan social por cuidar mi meta de ahorro, y no me arrepiento', excerpt: 'Al principio se siente raro quedar por fuera. Después entiendes que cada no que dices hoy es un sí que le estás dando a tu yo del futuro.', date: '15 de junio, 2026',
+      { id: '2026-06-15', category: 'experiencia', badge: 'Experiencia Personal', title: 'Aprendí a decir que no a un plan social por cuidar mi meta de ahorro, y no me arrepiento', excerpt: 'Al principio se siente raro quedar por fuera. Después entiendes que cada no que dices hoy es un sí que le estás dando a tu yo del futuro.', date: '15 de junio, 2026',
         dateSortValue: '2026-06-15',
         contenido_completo: [
           "Hubo una época en la que decir que no a un plan me generaba una ansiedad enorme. Sentía que me estaba perdiendo algo, que los demás iban a seguir con su vida social mientras yo me quedaba en la casa 'por cuidar la plata'.",
@@ -559,7 +559,7 @@
           "Hoy sigo saliendo, sigo disfrutando, pero ya no desde el miedo a quedarme por fuera, sino desde un presupuesto que ya tiene ese gusto contemplado. La diferencia es que ahora decido yo, no la presión social."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Sentirte culpable por gastar en ti no es disciplina financiera, es mala relación con la plata', excerpt: 'Hay gente que ahorra por miedo, no por meta. Ese miedo tarde o temprano se revienta en una compra impulsiva que compensa meses de restricción.', date: '25 de junio, 2026',
+      { id: '2026-06-25', category: 'psicologia', badge: 'Psicología del Dinero', title: 'Sentirte culpable por gastar en ti no es disciplina financiera, es mala relación con la plata', excerpt: 'Hay gente que ahorra por miedo, no por meta. Ese miedo tarde o temprano se revienta en una compra impulsiva que compensa meses de restricción.', date: '25 de junio, 2026',
         dateSortValue: '2026-06-25',
         contenido_completo: [
           "Hay personas que ahorran desde el miedo, no desde la meta. Se privan de todo, incluso de cosas pequeñas que no comprometen su plan, porque sienten que gastar en sí mismos es sinónimo de irresponsabilidad.",
@@ -568,7 +568,7 @@
           "Sentir culpa por un gasto que ya estaba contemplado no es disciplina, es una mala relación con la plata que probablemente viene de mucho antes. Aprender a disfrutar dentro de un plan es tan importante como aprender a ahorrar dentro de ese mismo plan."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Tener patrimonio no es tener un sueldo alto, es tener un plan detrás de ese sueldo', excerpt: 'Conozco gente que gana muy bien y no tiene nada construido, y gente que gana la mitad y ya tiene un plan patrimonial sólido. La diferencia nunca fue el ingreso.', date: '27 de junio, 2026',
+      { id: '2026-06-27', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Tener patrimonio no es tener un sueldo alto, es tener un plan detrás de ese sueldo', excerpt: 'Conozco gente que gana muy bien y no tiene nada construido, y gente que gana la mitad y ya tiene un plan patrimonial sólido. La diferencia nunca fue el ingreso.', date: '27 de junio, 2026',
         dateSortValue: '2026-06-27',
         contenido_completo: [
           "Conozco personas que ganan muy bien, sueldos que la mayoría envidiaría, y que sin embargo no tienen prácticamente nada construido. Y conozco personas que ganan la mitad y ya tienen un patrimonio sólido, con un plan claro detrás.",
@@ -577,7 +577,7 @@
           "Si estás esperando ganar más para empezar a construir patrimonio, es probable que nunca sea suficiente. El plan no empieza cuando el sueldo sube, empieza cuando decides que una parte de lo que ya ganas tiene un destino distinto al consumo."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi papá me enseñó a ahorrar, pero yo tuve que aprender solo a invertir', excerpt: 'Ahorrar y proteger la plata era la lección de su generación. Hacer que esa plata crezca es la que me tocó aprender a mí, y no fue fácil.', date: '8 de julio, 2026',
+      { id: '2026-07-08', category: 'experiencia', badge: 'Experiencia Personal', title: 'Mi papá me enseñó a ahorrar, pero yo tuve que aprender solo a invertir', excerpt: 'Ahorrar y proteger la plata era la lección de su generación. Hacer que esa plata crezca es la que me tocó aprender a mí, y no fue fácil.', date: '8 de julio, 2026',
         dateSortValue: '2026-07-08',
         contenido_completo: [
           "Mi papá me enseñó a ahorrar de la forma más práctica: guardando. Cuidando cada peso, evitando gastos innecesarios, y viendo la cuenta de ahorros como el lugar seguro donde la plata no se tocaba. Esa disciplina me la inculcó desde chiquito y se la agradezco muchísimo.",
@@ -586,7 +586,7 @@
           "Hoy trato de combinar las dos cosas: la disciplina de guardar que me enseñó mi papá, con el conocimiento de invertir que tuve que construir solo. Ninguna de las dos partes sobra, y las dos juntas son las que de verdad construyen patrimonio."
         ]
       },
-      { category: 'psicologia', badge: 'Psicología del Dinero', title: 'Nadie te enseñó a manejar la plata, por eso la manejas con culpa o con excusas', excerpt: 'La educación financiera no llegó a la casa de la mayoría. No es falta de fuerza de voluntad, es falta de información. Ese es el primer permiso que te tienes que dar.', date: '17 de julio, 2026',
+      { id: '2026-07-17', category: 'psicologia', badge: 'Psicología del Dinero', title: 'Nadie te enseñó a manejar la plata, por eso la manejas con culpa o con excusas', excerpt: 'La educación financiera no llegó a la casa de la mayoría. No es falta de fuerza de voluntad, es falta de información. Ese es el primer permiso que te tienes que dar.', date: '17 de julio, 2026',
         dateSortValue: '2026-07-17',
         contenido_completo: [
           "La educación financiera casi nunca llegó a la casa de la mayoría de nosotros. Se habla de gastos, de deudas, a veces de sueldo, pero rara vez alguien se sienta a explicarte cómo funciona de verdad el dinero, cómo se planea, cómo se protege, cómo se hace crecer.",
@@ -595,7 +595,7 @@
           "El primer permiso que te tienes que dar es dejar de juzgarte por no saber algo que nunca te enseñaron. A partir de ahí, aprender ya es una decisión, no una carga."
         ]
       },
-      { category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'El seguro de vida no es un gasto, es la única inversión que protege todas las demás', excerpt: 'Si algo te pasa, todo lo que construiste puede quedar en riesgo si no hay una cobertura detrás. Proteger el patrimonio es tan importante como construirlo.', date: '19 de julio, 2026',
+      { id: '2026-07-19', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'El seguro de vida no es un gasto, es la única inversión que protege todas las demás', excerpt: 'Si algo te pasa, todo lo que construiste puede quedar en riesgo si no hay una cobertura detrás. Proteger el patrimonio es tan importante como construirlo.', date: '19 de julio, 2026',
         dateSortValue: '2026-07-19',
         contenido_completo: [
           "El seguro de vida suele verse como un gasto más, una cuota mensual que se paga sin ver un retorno tangible, y por eso muchas veces es de los primeros gastos que la gente recorta cuando quiere 'ahorrar'.",
@@ -604,7 +604,7 @@
           "Proteger el patrimonio es tan importante como construirlo. De nada sirve un plan patrimonial sólido si un solo evento inesperado puede desmoronarlo por completo. El seguro de vida es, en ese sentido, la inversión que respalda a todas las demás."
         ]
       },
-      { category: 'experiencia', badge: 'Experiencia Personal', title: 'El día que dejé de comparar mi progreso financiero con el de mis amigos, empecé a avanzar de verdad', excerpt: 'Cada quien tiene un punto de partida distinto. Compararte constantemente solo te distrae de construir tu propio camino.', date: '31 de julio, 2026',
+      { id: '2026-07-31', category: 'experiencia', badge: 'Experiencia Personal', title: 'El día que dejé de comparar mi progreso financiero con el de mis amigos, empecé a avanzar de verdad', excerpt: 'Cada quien tiene un punto de partida distinto. Compararte constantemente solo te distrae de construir tu propio camino.', date: '31 de julio, 2026',
         dateSortValue: '2026-07-31',
         contenido_completo: [
           "Durante mucho tiempo medí mi progreso financiero comparándolo con el de mis amigos más cercanos. Si alguno compraba algo antes que yo, o avanzaba más rápido en alguna meta, sentía que yo iba atrasado, aunque en realidad no tuviera ni idea de su situación completa.",
@@ -614,6 +614,7 @@
         ]
       },
       {
+        id: '2026-08-07',
         category: 'estrategia',
         badge: 'Estrategia Patrimonial',
         title: 'El orden en que haces las inversiones define si llegas o si te hundes',
