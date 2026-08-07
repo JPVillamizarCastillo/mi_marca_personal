@@ -134,10 +134,6 @@
         font-size: 1.3rem;
       }
     }
-
-    .nav__link.is-active {
-      color: var(--accent);
-    }
   </style>
 </head>
 <body>
@@ -156,21 +152,8 @@
 
       <nav class="nav" id="mainNav">
         <ul class="nav__list">
-          <li><a href="index.html#nosotros" class="nav__link">Nosotros</a></li>
-          <li class="nav__item--dropdown">
-            <a href="index.html#servicios" class="nav__link nav__link--dropdown">
-              Servicios
-              <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <ul class="dropdown">
-              <li><a href="index.html#" class="dropdown__link">Personas</a></li>
-              <li><a href="index.html#" class="dropdown__link">Empresas</a></li>
-              <li><a href="index.html#" class="dropdown__link">Conferencias</a></li>
-            </ul>
-          </li>
-          <li><a href="reflexiones-financieras.html" class="nav__link is-active">Reflexiones Financieras</a></li>
+          <li><a href="index.html#nosotros" class="nav__link">¿Quién soy?</a></li>
+          <li><a href="reflexiones-financieras.html" class="nav__link">Reflexiones Financieras</a></li>
         </ul>
       </nav>
 
@@ -306,15 +289,6 @@
       const isOpen = mainNav.classList.toggle('is-open');
       navToggle.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    document.querySelectorAll('.nav__item--dropdown > .nav__link--dropdown').forEach((link) => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 900) {
-          e.preventDefault();
-          link.closest('.nav__item--dropdown').classList.toggle('is-open');
-        }
-      });
     });
 
     const contactModalOverlay = document.getElementById('contactModalOverlay');
