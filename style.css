@@ -725,6 +725,11 @@ body.modal-open {
   color: var(--accent);
 }
 
+/* ===== Override para Reflexion Modal ===== */
+.reflexion-modal {
+  max-width: 75vw !important;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .hero__lead-highlight {
@@ -882,6 +887,10 @@ body.modal-open {
 
   .modal__title {
     font-size: 1.4rem;
+  }
+
+  .reflexion-modal {
+    max-width: 90vw !important;
   }
 
   .form-row {
