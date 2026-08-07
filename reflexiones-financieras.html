@@ -124,17 +124,6 @@
       width: 100%;
     }
 
-    .reflexion-modal__body p {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text-secondary);
-      margin-bottom: 1.1rem;
-    }
-
-    .reflexion-modal__body p:last-child {
-      margin-bottom: 0;
-    }
-
     @media (max-width: 600px) {
       .reflexion-modal {
         max-width: 90vw;
@@ -397,6 +386,206 @@
 
     /* ===== Reflexiones Financieras: datos, filtros y paginación ===== */
     const reflexionesData = [
+      {
+        id: '2026-08-07',
+        category: 'estrategia',
+        badge: 'Estrategia Patrimonial',
+        title: 'El orden en que haces las inversiones define si llegas o si te hundes',
+        excerpt: 'Quieres tu lugar propio. Es legítimo. Pero casi nadie llega de la forma correcta: primero emoción, después deuda. Los que saben hacen lo opuesto: acumulan primero, compran con poder.',
+        date: '07 de agosto, 2026',
+        dateSortValue: '2026-08-07',
+        contenido_completo_html: `<p>Quieres tu lugar propio, eso es lo que buscamos la mayoria, a tu edad, con tus ingresos, es uno de tus propositos financieros.</p>
+
+<p style="color: #0ea5a5; font-weight: 600;">El problema es que casi nadie llega con una buena estrategia.</p>
+
+<!-- COMPARATIVA DOS COLUMNAS -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 2.5rem auto; max-width: 950px;">
+
+  <!-- COLUMNA IZQUIERDA: LO QUE HACE LA MAYORÍA -->
+  <div style="background: rgba(220, 38, 38, 0.08); border: 2px solid rgba(220, 38, 38, 0.3); border-radius: 12px; padding: 1.8rem;">
+    <p style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.2rem; font-size: 0.98rem;">La mayoría hace esto:</p>
+    <ol style="margin-left: 1.2rem; padding: 0;">
+      <li style="margin-bottom: 1rem; color: #666666;">Ve el apto bonito (emoción)</li>
+      <li style="margin-bottom: 1rem; color: #666666;">Pide crédito inmediatamente (impulso)</li>
+      <li style="margin-bottom: 1rem; color: #666666;">Se endeuda sin capital previo (error)</li>
+      <li style="color: #666666;">Pasa mas de 7 años pagando intereses de más</li>
+    </ol>
+  </div>
+
+  <!-- COLUMNA DERECHA: COMO DEBERÍA SER -->
+  <div style="background: rgba(14, 165, 165, 0.08); border: 2px solid rgba(14, 165, 165, 0.3); border-radius: 12px; padding: 1.8rem;">
+    <p style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.2rem; font-size: 0.98rem;">Cuando debería ser así:</p>
+    <ol style="margin-left: 1.2rem; padding: 0;">
+      <li style="margin-bottom: 1rem; color: #666666;">Define el sueño con números (estrategia)</li>
+      <li style="margin-bottom: 1rem; color: #666666;">Calcula cuánto necesita de entrada (Aterriza el sueño)</li>
+      <li style="margin-bottom: 1rem; color: #666666;">Acumula capital en instrumentos financieros (Engorde)</li>
+      <li style="color: #666666;">Cuando estas listo, entra con fuerza para el apartamento (Poder)</li>
+    </ol>
+  </div>
+
+</div>
+
+<h3>¿ POR QUÉ LA MAYORÍA LO HACE AL REVÉS ?</h3>
+<p>En Colombia creciste escuchando que "finca raíz es la inversión más segura". Y en parte es verdad.</p>
+
+<p>Pero lo que nadie te dice es que finca raíz es solo un PASO, no el primer paso.</p>
+
+<p><strong>El problema:</strong> Mateo quiere su apto ahora. Ve uno, se emociona, busca crédito. El banco le dice "sí, con 30% de entrada", pero Mateo tiene 30% de nada.</p>
+
+<p>¿Qué hace? Se endeuda para conseguir la entrada. Financia la entrada de su financiamiento. Es un círculo.</p>
+
+<p><strong>Resultado:</strong> entra al apto con deuda estructural que va a cargar por varios años. Paga intereses sobre intereses. El "sueño" se convierte en carga mental.</p>
+
+<h3>EL ORDEN CORRECTO (LA ESTRATEGIA DE 7 AÑOS)</h3>
+<p>Ahora te muestro cómo lo hacen los que saben.</p>
+
+<h4>AÑO 1-4: ACUMULACIÓN SIN CARGA MENTAL</h4>
+<ul>
+  <li>Metes plata en CAT a plazo fijo y seguridad.</li>
+  <li>Mientras tanto, armas portafolio de inversión paralelo si te da la capacidad.</li>
+</ul>
+
+<p><strong>¿QUÉ PASA EN ESOS 4 AÑOS?</strong></p>
+<ul>
+  <li>Acumulaste capital sin deuda</li>
+  <li>Tus rentabilidades ya están generando más rentabilidades (interés compuesto - Engorde)</li>
+  <li>Tu estabilidad financiera mejoró.</li>
+  <li>Tu historial crediticio está limpio y mejoro.</li>
+</ul>
+
+<h4>AÑO 4-5: DECISIÓN DE FINCA RAÍZ</h4>
+<ul>
+  <li>Ahora entra el apto, pero desde ARRIBA</li>
+  <li>Tienes 30-40% de entrada en efectivo (sin financiar la entrada)</li>
+  <li>Tu cuota de crédito es menor porque ya tienes capital</li>
+  <li>Los intereses que pagas son menores porque la deuda es menor</li>
+  <li>La ansiedad desaparece porque no te estás ahogando</li>
+</ul>
+
+<h4>AÑO 5-7: EL CIERRE</h4>
+<ul>
+  <li>Mientras pagas la deuda del apto, tu portafolio sigue rentando</li>
+  <li>El CAT te ayudó a financiar reparaciones, arreglos, sin volver a endeudarte</li>
+  <li>A los 7 años: tienes apto + capital + rentabilidades acumuladas</li>
+</ul>
+
+<blockquote style="margin: 1.5rem 0; background: rgba(14, 165, 165, 0.08); border-left: 4px solid #0ea5a5; padding: 1.2rem; border-radius: 6px;">
+  💡 <strong>CAT no es la inversión final. CAT es el trampolín para tu apto.</strong>
+</blockquote>
+
+<h3>TIPS PRÁCTICOS (QUÉ HACER AHORA)</h3>
+<ol>
+  <li><span style="color: #0ea5a5; font-weight: 700;">Calcula cuánto necesitas de entrada:</span> Si quieres apto de $300M, necesitas $90M (30%). Esa es tu meta.</li>
+  <li><span style="color: #0ea5a5; font-weight: 700;">Divide el número entre los años:</span> Si tienes 4 años, necesitas $22 anuales. ¿Puedes ahorrar eso? Si no, extiende el plazo a 5-6 años.</li>
+  <li><span style="color: #0ea5a5; font-weight: 700;">Distribuye tu ahorro:</span> 90% en CAT dentro del plazo de los 4 años. 10% en portafolio de inversión con liquidez.</li>
+  <li><span style="color: #0ea5a5; font-weight: 700;">Olvídate de loliar apartamentos por 2-3 años:</span> En serio. La emoción te va a jugar una mala pasada. Cuando tengas el capital, ahí miras.</li>
+  <li><span style="color: #0ea5a5; font-weight: 700;">Habla con alguien que sepa:</span> No con tu tío que invirtió en finca raíz hace 10 años (el contexto cambió).</li>
+</ol>
+
+<p><strong style="color: #0ea5a5;">¿4 años de fortalecimiento para ahorrar $273 Millones en interes?</strong></p>
+
+<p><strong style="color: #0ea5a5;">No se ustedes pero para mi, vale full la pena.</strong></p>
+
+<p>Eso no es suerte. Es matemática pura. Eso es estrategia.</p>
+
+<h3>LA DIFERENCIA REAL (EN NÚMEROS)</h3>
+
+<!-- COMPARATIVA VISUAL -->
+<div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: start; margin: 2rem 0; padding: 1.5rem 0; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;">
+
+  <!-- ESCENARIO A -->
+  <div style="background: rgba(220, 38, 38, 0.05); border: 2px solid #dc2626; border-radius: 12px; padding: 1.5rem; text-align: center;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 1rem;">
+      <span style="font-weight: 600; color: #dc2626; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">⚠️ SIN ESTRATEGIA</span>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Cuota mensual</div>
+      <div style="font-size: 26px; font-weight: 700; color: #dc2626;">$3.87M</div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Años de deuda</div>
+      <div style="font-size: 26px; font-weight: 700; color: #dc2626;">25 años</div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Intereses</div>
+      <div style="font-size: 26px; font-weight: 700; color: #dc2626;">$496M</div>
+    </div>
+
+    <div style="background: rgba(220, 38, 38, 0.1); border-radius: 8px; padding: 1rem;">
+      <span style="font-weight: 600; color: #dc2626; font-size: 0.9rem;">Incómodo · Ajustado</span>
+    </div>
+  </div>
+
+  <!-- DIFERENCIA -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; text-align: center;">
+    <div style="font-size: 10px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Ahorras</div>
+    <div style="text-align: center;">
+      <div style="font-size: 28px; font-weight: 700; color: #0ea5a5;">$1.54M</div>
+      <div style="font-size: 10px; color: #666666;">por mes</div>
+    </div>
+
+    <div style="text-align: center;">
+      <div style="font-size: 32px; font-weight: 700; color: #0ea5a5;">10</div>
+      <div style="font-size: 10px; color: #666666;">años menos</div>
+    </div>
+
+    <div style="text-align: center;">
+      <div style="font-size: 28px; font-weight: 700; color: #0ea5a5;">$273M</div>
+      <div style="font-size: 10px; color: #666666;">ahorrados</div>
+    </div>
+  </div>
+
+  <!-- ESCENARIO B -->
+  <div style="background: rgba(14, 165, 165, 0.05); border: 2px solid #0ea5a5; border-radius: 12px; padding: 1.5rem; text-align: center;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 1rem;">
+      <span style="font-weight: 600; color: #0ea5a5; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">✓ CON ESTRATEGIA</span>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Cuota mensual</div>
+      <div style="font-size: 26px; font-weight: 700; color: #0ea5a5;">$2.33M</div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Años de deuda</div>
+      <div style="font-size: 26px; font-weight: 700; color: #0ea5a5;">15 años</div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 11px; color: #666666; margin-bottom: 0.5rem;">Intereses</div>
+      <div style="font-size: 26px; font-weight: 700; color: #0ea5a5;">$223M</div>
+    </div>
+
+    <div style="background: rgba(14, 165, 165, 0.1); border-radius: 8px; padding: 1rem;">
+      <span style="font-weight: 600; color: #0ea5a5; font-size: 0.9rem;">Holgado · Tranquilo</span>
+    </div>
+  </div>
+
+</div>
+
+<h3>REFLEXIÓN</h3>
+<p>No estoy diciendo que no compres apto. Estoy diciendo que no lo hagas entrando desde abajo.</p>
+
+<p style="color: #0ea5a5; font-weight: 600;">Busca ser estrategico, no precoz.</p>
+
+<!-- COMPARATIVA DOS COLUMNAS FINAL -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 2.5rem auto; max-width: 950px;">
+
+  <!-- COLUMNA IZQUIERDA: RESULTADO MALO -->
+  <div style="background: rgba(220, 38, 38, 0.08); border: 2px solid rgba(220, 38, 38, 0.3); border-radius: 12px; padding: 1.8rem; display: flex; align-items: center; justify-content: center;">
+    <p style="font-weight: 700; color: #dc2626; font-size: 1.05rem; margin: 0; text-align: center; white-space: nowrap;">Uno llega con apto + ansiedad.</p>
+  </div>
+
+  <!-- COLUMNA DERECHA: RESULTADO BUENO -->
+  <div style="background: rgba(14, 165, 165, 0.08); border: 2px solid rgba(14, 165, 165, 0.3); border-radius: 12px; padding: 1.8rem; display: flex; align-items: center; justify-content: center;">
+    <p style="font-weight: 700; color: #0ea5a5; font-size: 1.05rem; margin: 0; text-align: center; white-space: nowrap;">El otro llega con apto + tranquilidad.</p>
+  </div>
+
+</div>`
+      },
       { id: '2026-03-08', category: 'estrategia', badge: 'Estrategia Patrimonial', title: 'Un horizonte de tiempo mal definido es apostar, no invertir', excerpt: 'La misma plata puede ir en un producto totalmente distinto si la necesitas en un año o en quince. El horizonte de tiempo, no el producto de moda, es lo que debería definir dónde pones tu dinero.', date: '8 de marzo, 2026',
         dateSortValue: '2026-03-08',
         contenido_completo: [
@@ -612,24 +801,6 @@
           "El día que dejé de mirar hacia el lado y empecé a mirar solo mi propia línea de tiempo, algo cambió. Dejé de tomar decisiones apuradas por 'alcanzar' a alguien y empecé a tomar decisiones que de verdad tenían sentido para mi situación.",
           "Cada quien tiene un punto de partida distinto y una carrera distinta que correr. Compararte constantemente solo te distrae de construir tu propio camino, y ese camino es, al final, el único que realmente importa."
         ]
-      },
-      {
-        id: '2026-08-07',
-        category: 'estrategia',
-        badge: 'Estrategia Patrimonial',
-        title: 'El orden en que haces las inversiones define si llegas o si te hundes',
-        excerpt: 'Quieres tu apartamento. Es legítimo. Pero casi nadie llega de la forma correcta: primero emoción, después deuda. Los que saben hacen lo opuesto: acumulan primero, compran con poder.',
-        date: '07 de agosto, 2026',
-        dateSortValue: '2026-08-07',
-        contenido_completo: [
-          "Quieres tu lugar propio. Es legítimo. A tu edad, con tus ingresos, es uno de tus propósitos financieros. El problema es que casi nadie llega de la forma correcta. La mayoría hace esto: ve el apartamento bonito, pide crédito inmediatamente, se endeuda sin capital previo, y pasa más de 7 años pagando intereses de más. Cuando debería ser así: define el sueño con números, calcula cuánto necesita de entrada, acumula capital en instrumentos financieros, y cuando está listo, entra con fuerza para el apartamento.",
-          "En Colombia creciste escuchando que \"finca raíz es la inversión más segura\". Y en parte es verdad. Pero lo que nadie te dice es que finca raíz es solo un paso, no el primer paso. El problema es que Mateo quiere su apartamento ahora. Ve uno, se emociona, busca crédito. El banco le dice \"sí, con 30% de entrada\", pero Mateo tiene 30% de nada. ¿Qué hace? Se endeuda para conseguir la entrada. Financia la entrada de su financiamiento. Es un círculo. El resultado: entra al apartamento con deuda estructural que va a cargar por varios años, paga intereses sobre intereses, y el \"sueño\" se convierte en carga mental.",
-          "Los que saben lo hacen distinto, y funciona. Los primeros 4 años son de acumulación sin carga mental: metes plata en CAT a plazo fijo y seguridad, mientras tanto armas un portafolio de inversión paralelo si te da la capacidad. En esos 4 años pasa algo importante: acumulaste capital sin deuda, tus rentabilidades ya están generando más rentabilidades porque el interés compuesto empieza a funcionar, tu estabilidad financiera mejoró, y tu historial crediticio está limpio y mejor.",
-          "En el año 4 o 5 entra el apartamento, pero desde arriba. Ya tienes 30% o 40% de entrada en efectivo, sin financiar la entrada. Tu cuota de crédito es menor porque ya tienes capital. Los intereses que pagas son menores porque la deuda es menor. La ansiedad desaparece porque no te estás ahogando. Mientras pagas la deuda del apartamento, tu portafolio sigue rentando. El CAT te ayuda a financiar reparaciones y arreglos sin volver a endeudarte. A los 7 años: tienes apartamento, tienes capital, tienes rentabilidades acumuladas.",
-          "Lo que cambia todo es cómo lo ves. Decirle a un amigo o a tu familia que estás invirtiendo en un CAT es correcto, pero si la historia fuera \"Estoy desarrollando mi estrategia financiera para lograr mi apartamento\", eso cambia la cosa. CAT no es la inversión final. CAT es el trampolín para tu apartamento. CAT no es \"dinero que se aburre\". Es capital que está trabajando para que en 4 años no tengas que endeudarte completo. Es tranquilidad mental mientras construyes. Es poder cuando llegue el momento.",
-          "Ahora, los pasos prácticos: primero, calcula cuánto necesitas de entrada. Si quieres apartamento de $300 millones, necesitas $90 millones de entrada (30%). Esa es tu meta. Segundo, divide el número entre los años. Si tienes 4 años, necesitas $22.5 millones anuales. ¿Puedes ahorrar eso? Si no, extiende el plazo a 5 o 6 años. Tercero, distribuye tu ahorro: 90% en CAT dentro del plazo de los 4 años, y 10% en portafolio de inversión con liquidez. Cuarto, olvídate de visitar apartamentos por 2 o 3 años. En serio. La emoción te va a jugar una mala pasada. Cuando tengas el capital, ahí miras. Quinto, habla con alguien que sepa, no con tu tío que invirtió en finca raíz hace 10 años porque el contexto cambió.",
-          "No estoy diciendo que no compres apartamento. Estoy diciendo que no lo hagas arruinándote en el proceso. La diferencia entre la persona que lo hace bien y la que lo hace mal no es suerte. Es orden. Es estrategia antes que emoción. Es decir \"espera 4 años, acumula como loco, y entra con poder\" en lugar de \"emocionémonos ahora y pagamos intereses después\". Uno llega a los 35 años con apartamento y tranquilidad. El otro llega con apartamento y ansiedad."
-        ]
       }
     ];
 
@@ -710,7 +881,9 @@
       reflexionModalBadge.textContent = r.badge;
       reflexionModalTitle.textContent = r.title;
       reflexionModalDate.textContent = r.date;
-      reflexionModalBody.innerHTML = r.contenido_completo.map((p) => `<p>${p}</p>`).join('');
+      reflexionModalBody.innerHTML = r.contenido_completo_html
+        ? r.contenido_completo_html
+        : r.contenido_completo.map((p) => `<p>${p}</p>`).join('');
 
       reflexionModalOverlay.classList.add('is-open');
       document.body.classList.add('modal-open');
