@@ -672,7 +672,7 @@ body.modal-open {
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 48px;
 }
 
@@ -763,15 +763,6 @@ body.modal-open {
 
   .footer {
     padding: 56px 0 32px;
-  }
-
-  .footer__inner {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 40px;
-  }
-
-  .footer__col--brand {
-    grid-column: 1 / -1;
   }
 
   .nav {
@@ -901,10 +892,6 @@ body.modal-open {
   .footer__inner {
     grid-template-columns: 1fr;
     row-gap: 36px;
-  }
-
-  .footer__col--brand {
-    grid-column: auto;
   }
 }
 
