@@ -871,17 +871,19 @@ body.modal-open {
     font-size: 1.15rem;
   }
 
+  .modal-overlay {
+    padding: 16px;
+  }
+
   .modal {
+    max-width: 95vw;
     padding: 32px 20px;
     border-radius: 16px;
+    overflow-x: hidden;
   }
 
   .modal__title {
     font-size: 1.4rem;
-  }
-
-  .reflexion-modal {
-    max-width: 90vw !important;
   }
 
   .form-row {
@@ -959,4 +961,62 @@ body.modal-open {
 .reflexion-modal__body strong {
   font-weight: 700;
   color: var(--text-primary);
+}
+
+.reflexion-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin: 2.5rem auto;
+  max-width: 950px;
+}
+
+.reflexion-grid-3col {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 600px) {
+  .reflexion-grid-2col,
+  .reflexion-grid-3col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .reflexion-modal__body p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .reflexion-modal__body ul,
+  .reflexion-modal__body ol {
+    margin-left: 1.2rem;
+  }
+
+  .reflexion-modal__body ul li,
+  .reflexion-modal__body ol li {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .reflexion-modal__body h3 {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+
+  .reflexion-modal__body h4 {
+    margin-top: 1rem;
+  }
+
+  .reflexion-modal__body blockquote {
+    margin: 1.2rem 0;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
 }
