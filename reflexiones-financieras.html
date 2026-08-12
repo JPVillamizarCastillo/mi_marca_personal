@@ -86,60 +86,8 @@
       }
     }
 
-    /* ===== Modal de reflexión completa ===== */
     .reflexion-card {
       cursor: pointer;
-    }
-
-    .reflexion-modal {
-      max-width: 75vw;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 2rem;
-      border-radius: 12px;
-    }
-
-    .reflexion-modal__badge {
-      margin-bottom: 16px;
-    }
-
-    .reflexion-modal__title {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.3;
-      padding-right: 32px;
-    }
-
-    .reflexion-modal__date {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 28px;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      opacity: 0.7;
-    }
-
-    .reflexion-modal__body {
-      width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      .reflexion-modal {
-        max-width: 95vw;
-        max-height: 85vh;
-        padding: 24px 20px;
-        overflow-x: hidden;
-      }
-
-      .reflexion-modal__title {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
-      }
-
-      .reflexion-modal__date {
-        margin-bottom: 1rem;
-      }
     }
   </style>
 </head>
@@ -264,21 +212,6 @@
     </div>
   </div>
 
-  <div class="modal-overlay" id="reflexionModalOverlay">
-    <div class="modal reflexion-modal" role="dialog" aria-modal="true" aria-labelledby="reflexionModalTitle">
-      <button type="button" class="modal__close" id="closeReflexionModal" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </button>
-
-      <span class="reflexion-card__badge reflexion-modal__badge" id="reflexionModalBadge"></span>
-      <h2 class="reflexion-modal__title" id="reflexionModalTitle"></h2>
-      <time class="reflexion-modal__date" id="reflexionModalDate"></time>
-      <div class="reflexion-modal__body" id="reflexionModalBody"></div>
-    </div>
-  </div>
-
   <script>
     const navToggle = document.getElementById('navToggle');
     const mainNav = document.getElementById('mainNav');
@@ -366,6 +299,7 @@
         excerpt: 'Quieres tu lugar propio. Es legítimo. Pero casi nadie llega de la forma correcta: primero emoción, después deuda. Los que saben hacen lo opuesto: acumulan primero, compran con poder.',
         date: '07 de agosto, 2026',
         dateSortValue: '2026-08-07',
+        url: 'reflexion-engorde.html',
         contenido_completo_html: `<p>Quieres tu lugar propio, eso es lo que buscamos la mayoria, a tu edad, con tus ingresos, es uno de tus propositos financieros.</p>
 
 <p style="color: #0ea5a5; font-weight: 600;">El problema es que casi nadie llega con una buena estrategia.</p>
@@ -578,14 +512,14 @@
       return reflexionesData.filter((r) => r.category === currentFilter);
     }
 
-    function cardTemplate(r, index) {
+    function cardTemplate(r) {
       return `
-        <article class="reflexion-card" data-index="${index}" tabindex="0" role="button" aria-haspopup="dialog">
+        <a href="${r.url}" class="reflexion-card" role="button">
           <span class="reflexion-card__badge">${r.badge}</span>
           <h3 class="reflexion-card__title">${r.title}</h3>
           <p class="reflexion-card__excerpt">${r.excerpt}</p>
           <time class="reflexion-card__date">${r.date}</time>
-        </article>
+        </a>
       `;
     }
 
@@ -593,21 +527,9 @@
       const filtered = getFilteredReflexiones();
       const visible = filtered.slice(0, visibleCount);
 
-      reflexionesListEl.innerHTML = visible.map((r, i) => cardTemplate(r, reflexionesData.indexOf(r))).join('');
+      reflexionesListEl.innerHTML = visible.map((r) => cardTemplate(r)).join('');
       reflexionesCountEl.textContent = `Mostrando ${visible.length} de ${filtered.length} reflexiones`;
       loadMoreBtn.style.display = visibleCount >= filtered.length ? 'none' : 'inline-flex';
-
-      reflexionesListEl.querySelectorAll('.reflexion-card').forEach((card) => {
-        card.addEventListener('click', () => {
-          openReflexionModal(reflexionesData[Number(card.dataset.index)]);
-        });
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openReflexionModal(reflexionesData[Number(card.dataset.index)]);
-          }
-        });
-      });
     }
 
     filterBtns.forEach((btn) => {
@@ -623,44 +545,6 @@
     loadMoreBtn.addEventListener('click', () => {
       visibleCount += PAGE_SIZE;
       renderReflexiones();
-    });
-
-    /* ===== Modal de reflexión completa ===== */
-    const reflexionModalOverlay = document.getElementById('reflexionModalOverlay');
-    const closeReflexionModal = document.getElementById('closeReflexionModal');
-    const reflexionModalBadge = document.getElementById('reflexionModalBadge');
-    const reflexionModalTitle = document.getElementById('reflexionModalTitle');
-    const reflexionModalDate = document.getElementById('reflexionModalDate');
-    const reflexionModalBody = document.getElementById('reflexionModalBody');
-
-    function openReflexionModal(r) {
-      reflexionModalBadge.textContent = r.badge;
-      reflexionModalTitle.textContent = r.title;
-      reflexionModalDate.textContent = r.date;
-      reflexionModalBody.innerHTML = r.contenido_completo_html
-        ? r.contenido_completo_html
-        : r.contenido_completo.map((p) => `<p>${p}</p>`).join('');
-
-      reflexionModalOverlay.classList.add('is-open');
-      document.body.classList.add('modal-open');
-      reflexionModalOverlay.querySelector('.modal').scrollTop = 0;
-    }
-
-    function closeReflexionModalFn() {
-      reflexionModalOverlay.classList.remove('is-open');
-      document.body.classList.remove('modal-open');
-    }
-
-    closeReflexionModal.addEventListener('click', closeReflexionModalFn);
-
-    reflexionModalOverlay.addEventListener('click', (e) => {
-      if (e.target === reflexionModalOverlay) closeReflexionModalFn();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && reflexionModalOverlay.classList.contains('is-open')) {
-        closeReflexionModalFn();
-      }
     });
 
     renderReflexiones();

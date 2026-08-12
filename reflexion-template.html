@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       REEMPLAZAR: Título de la pestaña del navegador
+       Formato sugerido: "[Título de la reflexión] | JP Villamizar"
+  ============================================================= -->
+  <title>Título de la reflexión aquí | JP Villamizar</title>
+
+  <!-- ============================================================
+       REEMPLAZAR: Meta description y Open Graph (usa el excerpt
+       de la reflexión). Estos tags son los que LinkedIn lee para
+       armar la tarjeta de vista previa cuando compartes el link.
+  ============================================================= -->
+  <meta name="description" content="Excerpt / resumen corto de la reflexión aquí." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Título de la reflexión aquí" />
+  <meta property="og:description" content="Excerpt / resumen corto de la reflexión aquí." />
+  <meta property="og:url" content="https://jpvillamizar.vercel.app/reflexion-YYYY-MM-DD.html" />
+  <!-- Opcional: si tienes una imagen de portada para la reflexión, descomenta y ajusta -->
+  <!-- <meta property="og:image" content="https://jpvillamizar.vercel.app/og-reflexiones.jpg" /> -->
+  <link rel="canonical" href="https://jpvillamizar.vercel.app/reflexion-YYYY-MM-DD.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== Reflexión individual (template) ===== */
+    .reflexion-page {
+      padding: 100px 0 100px;
+    }
+
+    .reflexion-content-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .reflexion-badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .reflexion-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .reflexion-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .reflexion-meta__date {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .reflexion-content {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .reflexion-content p {
+      margin-bottom: 18px;
+    }
+
+    .reflexion-content h2 {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+
+    .reflexion-content h3 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .reflexion-content strong {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .reflexion-content ul,
+    .reflexion-content ol {
+      margin: 0 0 18px 1.4rem;
+    }
+
+    .reflexion-content li {
+      margin-bottom: 8px;
+    }
+
+    .reflexion-content blockquote {
+      margin: 24px 0;
+      padding: 20px 24px;
+      background-color: rgba(14, 165, 165, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 600px) {
+      .reflexion-page {
+        padding: 80px 0 80px;
+      }
+
+      .reflexion-title {
+        font-size: 1.7rem;
+      }
+
+      .reflexion-meta {
+        gap: 10px;
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+      }
+
+      .reflexion-content {
+        font-size: 1rem;
+      }
+
+      .reflexion-content h2 {
+        font-size: 1.3rem;
+        margin-top: 32px;
+      }
+
+      .reflexion-content h3 {
+        font-size: 1.1rem;
+        margin-top: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Juan Pablo Villamizar" class="logo__img" />
+      </a>
+
+      <button type="button" class="btn btn--cta header__cta js-open-contact" id="openContactModal">HABLEMOS</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="reflexion-page">
+      <div class="container">
+        <div class="reflexion-content-wrap">
+
+          <!-- ============================================================
+               REEMPLAZAR: Badge de categoría
+               Opciones usadas en el sitio: "Estrategia Patrimonial",
+               "Psicología del Dinero", "Experiencia Personal"
+          ============================================================= -->
+          <span class="reflexion-badge">Estrategia Patrimonial</span>
+
+          <!-- REEMPLAZAR: Título de la reflexión -->
+          <h1 class="reflexion-title">Título de la reflexión aquí</h1>
+
+          <!-- REEMPLAZAR: Fecha de publicación -->
+          <div class="reflexion-meta">
+            <time class="reflexion-meta__date">07 de agosto, 2026</time>
+          </div>
+
+          <!-- ============================================================
+               REEMPLAZAR: Contenido completo de la reflexión.
+               Usa <p>, <h2>, <h3>, <ul>/<ol>, <blockquote> y <strong>
+               según lo necesites — todos ya tienen estilo dentro de
+               .reflexion-content. NO agregues CTA ni botones acá,
+               la navegación se hace desde el header/footer.
+          ============================================================= -->
+          <div class="reflexion-content">
+            <p>Primer párrafo de la reflexión aquí.</p>
+
+            <h2>Subtítulo si lo necesitas</h2>
+            <p>Más contenido de la reflexión aquí.</p>
+
+            <h3>Un punto más específico</h3>
+            <p>Desarrollo de ese punto aquí.</p>
+
+            <blockquote>
+              Frase o idea destacada aquí.
+            </blockquote>
+
+            <p>Párrafo de cierre / reflexión final aquí.</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- SECCIÓN DE CIERRE: VOLVER A REFLEXIONES -->
+    <section class="reflexion-closure" style="margin-top: 80px; padding: 48px 0; border-top: 1px solid var(--border); text-align: center;">
+      <h3 style="font-size: 18px; font-weight: 500; margin: 0 0 16px 0; color: var(--text-primary);">¿Quieres leer más reflexiones?</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 0 0 24px 0;">Descubre análisis sobre construcción patrimonial, psicología del dinero y estrategia financiera.</p>
+      <a href="reflexiones-financieras.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; box-sizing: border-box; background: var(--accent); color: #ffffff; padding: 12px 28px; border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; transition: opacity 0.2s ease;">
+        ← Volver a todas las reflexiones
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__brand">Juan Pablo Villamizar Castillo</a>
+        <a href="mailto:jpvillamizar@fp.skandia.com.co" class="footer__email">jpvillamizar@fp.skandia.com.co</a>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Enlaces</h3>
+        <ul class="footer__list">
+          <li><a href="index.html#nosotros" class="footer__link">¿Quién soy?</a></li>
+          <li><a href="reflexiones-financieras.html" class="footer__link">Reflexiones</a></li>
+          <li><a href="index.html#servicios" class="footer__link">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="contactModalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+      <button type="button" class="modal__close" id="closeContactModal" aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <h2 class="modal__title" id="contactModalTitle">Ponte en contacto</h2>
+      <p class="modal__subtitle">Cuéntanos sobre tu proyecto y te contactaremos a la brevedad.</p>
+
+      <form class="modal__form" id="contactForm">
+        <div class="form-group">
+          <label for="fullName">Nombre Completo</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/tu-perfil" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">¿Cómo te podemos ayudar?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <label class="checkbox-group">
+          <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required />
+          <span>He leído y acepto las <a href="#" class="inline-link">políticas de privacidad</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn--cta modal__submit">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const contactModalOverlay = document.getElementById('contactModalOverlay');
+    const openContactModalTriggers = document.querySelectorAll('.js-open-contact');
+    const closeContactModal = document.getElementById('closeContactModal');
+
+    const openModal = (e) => {
+      if (e) e.preventDefault();
+      contactModalOverlay.classList.add('is-open');
+      document.body.classList.add('modal-open');
+    };
+
+    const closeModal = () => {
+      contactModalOverlay.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+    };
+
+    openContactModalTriggers.forEach((trigger) => trigger.addEventListener('click', openModal));
+    closeContactModal.addEventListener('click', closeModal);
+
+    contactModalOverlay.addEventListener('click', (e) => {
+      if (e.target === contactModalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && contactModalOverlay.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = 'ENVIANDO...';
+      submitBtn.disabled = true;
+
+      // Reemplaza esta URL con la tuya de Google Apps Script
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHT7zYtWZRDqIqQ-Z_yzwOs47rKaZ9F3GA0aGe3IZ6wIFYPAkXJtQAMqJR0zdX5Y1I7g/exec';
+
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        linkedin: document.getElementById('linkedin').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+        .then(() => {
+          alert('¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.');
+          e.target.reset();
+          closeModal();
+        })
+        .catch((error) => {
+          alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo.');
+          console.error('Error:', error);
+        })
+        .finally(() => {
+          submitBtn.innerText = originalBtnText;
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+
+</body>
+</html>
