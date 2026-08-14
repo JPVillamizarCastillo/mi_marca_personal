@@ -160,6 +160,34 @@
         margin-top: 1.2rem;
       }
     }
+
+    .pepito-box { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .pepito-head { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+    .pepito-intro { font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 24px 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+    .pepito-year { margin-bottom: 28px; }
+    .pepito-year--hito { border: 2px solid var(--accent); border-radius: 12px; padding: 20px; }
+    .pepito-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; background: var(--accent); color: #ffffff; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+    .pepito-label { font-size: 0.875rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+    .pepito-row { display: grid; grid-template-columns: 84px 1fr 92px; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .pepito-name { font-size: 0.75rem; }
+    .pepito-track { height: 10px; background: #eef0f0; border-radius: 3px; }
+    .pepito-fill { height: 10px; border-radius: 3px; }
+    .pepito-val { font-size: 0.8rem; font-weight: 700; text-align: right; }
+    .pepito-cap { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 0 0; }
+    .pepito-cap-sub { padding-top: 28px; border-top: 1px solid var(--border); }
+    .pepito-crow { display: grid; grid-template-columns: 52px 1fr 72px; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .pepito-stack { display: flex; height: 22px; border-radius: 3px; overflow: hidden; }
+    .pepito-stack span { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #ffffff; }
+    .pepito-legend { display: flex; gap: 16px; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 16px; }
+    .pepito-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+    .pepito-note { background: #f5f7f7; border-radius: 8px; padding: 16px 20px; margin: 24px 0 16px 0; }
+    .pepito-note p { font-size: 0.95rem; color: var(--text-primary); margin: 0; line-height: 1.7; }
+    .pepito-foot { font-size: 0.72rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    @media (max-width: 600px) {
+      .pepito-row { grid-template-columns: 70px 1fr 80px; gap: 6px; }
+      .pepito-crow { grid-template-columns: 44px 1fr 62px; gap: 6px; }
+      .pepito-val { font-size: 0.72rem; }
+    }
   </style>
 </head>
 <body>
@@ -183,16 +211,12 @@
 
           <h1 class="reflexion-title">¿Y si me muero mañana y no disfruté?</h1>
 
-          <p class="reflexion-subtitle">Por qué $250K invertidos inteligentemente se convierten en tu libertad</p>
-
           <div class="reflexion-meta">
             <time class="reflexion-meta__date">13 de agosto, 2026</time>
           </div>
 
           <div class="reflexion-content">
-            <p>¿Y si me muero mañana y no disfruté?</p>
-
-            <p>Es la pregunta que más me hacen en las asesorías.</p>
+            <p>Esa es la pregunta que más me hacen en las asesorías.</p>
 
             <p>No es "¿cuánto me rinde?". No es "¿qué producto es mejor?". Es esa: ¿y si me muero mañana y no disfruté nada de lo que trabajé?</p>
 
@@ -216,7 +240,7 @@
 
             <p>A mí no me quita el sueño morirme sin haber viajado o comprado cosas.</p>
 
-            <p>Me quita el sueño estar vivo y no tener estabilidad financiera, morir y no haber aprovechado las oportunidades de estar con mi familia y las personas que quiero.</p>
+            <p>Me quita el sueño estar vivo y no tener estabilidad financiera o morir y no haber aprovechado las oportunidades de estar con mi familia y las personas que quiero.</p>
 
             <p>Hoy podemos ver a las personas mayores que viven sin estabilidad financiera, esas persona que hace 20 años tenía exactamente tu edad y exactamente tu sueldo o inclusive ingresos mucho más altos.</p>
 
@@ -226,100 +250,138 @@
 
             <p>No te estoy diciendo que no viajes. No te estoy diciendo que no compres. La vida no es aguantar 30 años para disfrutar después. Eso es exactamente el error que te da miedo, y con razón.</p>
 
-            <p>Pero si te organizas, puedes hacer presupuesto, primero sacar tu inversión y luego sabes cuanto tienes para disfrute, uno vive con lo que tiene, si tienes 3 millones para gastar en un mes, probablemente te lo gastas, al igual que si tienes 500 mil, uno vive a la medida de lo que disponga para gastar, por eso primero sacar tu ahorra e inversión y después ya sabes cuanto te queda.</p>
+            <p>Pero si te organizas, puedes hacer presupuesto, primero sacar tu inversión y luego sabes cuanto tienes para disfrute, uno vive con lo que tiene, si tienes 3 millones para gastar en un mes, probablemente te lo gastas, al igual que si tienes 500 mil, uno vive a la medida de lo que disponga para gastar, por eso primero sacar tu ahorro e inversión y después ya sabes cuanto te queda.</p>
 
-            <p>El test es sencillo y es brutal: ¿lo quieres tú, o lo quieres porque alguien lo va a ver?</p>
+            <p>El test es sencillo y es brutal: dentro de diez años, ¿te vas a acordar de las cosas que dejaste de comprar?</p>
 
             <p>Porque si me muero mañana, sinceramente, no me va a doler no haber conocido un país más. Me va a doler haber sido una mala persona, o no haber estado con la gente que quiero cuando podía. La riqueza que a mí me importa no está en los excesos: está en un abrazo de mi mamá y en una conversación larga con mis amigos.</p>
 
-            <p>Y eso no cuesta $250.000 al mes.</p>
+            <h3>VAMOS A HACER UN EJERCICIO</h3>
 
-            <div style="padding: 1.5rem 0;">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-                <div style="background: var(--bg-elevated); border: 2px solid #fbbf24; border-radius: 12px; padding: 1.5rem; text-align: center;">
-                  <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 1rem;">
-                    <span style="font-size: 20px;">⏳</span>
-                    <span style="font-weight: 500; color: var(--text-primary); font-size: 13px;">FASE 1: CONSTRUCCIÓN</span>
-                  </div>
-                  <div style="margin-bottom: 1.5rem;">
-                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 0.5rem;">Años 1-9</div>
-                    <div style="font-size: 24px; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">$39M</div>
-                    <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 1rem;">acumulado en capital</div>
-                    <div style="border: 0.5px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg); margin-bottom: 0.75rem;">
-                      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 4px;">Tu aporte mensual</div>
-                      <div style="font-size: 16px; font-weight: 500; color: var(--text-primary);">$250K</div>
-                    </div>
-                    <div style="border: 0.5px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg);">
-                      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 4px;">Lo que el dinero genera</div>
-                      <div style="font-size: 16px; font-weight: 500; color: #fbbf24;">+ $315K/mes</div>
-                    </div>
-                  </div>
-                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border);">
-                    <div style="background: rgba(251, 191, 36, 0.1); color: #92400e; padding: 0.5rem; border-radius: 6px; font-size: 12px; font-weight: 500;">Lento pero consistente</div>
-                  </div>
-                </div>
+            <p>Digamos que este mes apartas $250.000 antes de gastar el resto. Los pones en un fondo que te renta 8% efectivo anual, y ahí los dejas quietos.</p>
 
-                <div style="background: var(--bg-elevated); border: 2px solid #0ea5a5; border-radius: 12px; padding: 1.5rem; text-align: center;">
-                  <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 1rem;">
-                    <span style="font-size: 20px;">🚀</span>
-                    <span style="font-weight: 500; color: var(--text-primary); font-size: 13px;">FASE 2: ACELERACIÓN</span>
-                  </div>
-                  <div style="margin-bottom: 1.5rem;">
-                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 0.5rem;">Años 9-15</div>
-                    <div style="font-size: 24px; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">$87M</div>
-                    <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 1rem;">acumulado en capital</div>
-                    <div style="border: 0.5px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg); margin-bottom: 0.75rem;">
-                      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 4px;">Tu aporte mensual</div>
-                      <div style="font-size: 16px; font-weight: 500; color: var(--text-primary);">$250K</div>
-                    </div>
-                    <div style="border: 0.5px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg);">
-                      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 4px;">Lo que el dinero genera</div>
-                      <div style="font-size: 16px; font-weight: 500; color: #0ea5a5;">+ $574K/mes</div>
-                    </div>
-                  </div>
-                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border);">
-                    <div style="background: rgba(14, 165, 165, 0.1); color: #064e48; padding: 0.5rem; border-radius: 6px; font-size: 12px; font-weight: 500;">El dinero trabaja por ti</div>
-                  </div>
+            <p>No lo pienses como un ahorro más. Piénsalo como que acabas de abrir tu propia compañía y contrataste a tu primer empleado.</p>
+
+            <p>Le pagas $250.000 al mes, todos los meses. Su único trabajo es producir plata para ti.</p>
+
+            <p><strong>Tu trabajador se llama Pepito Pérez. Veamos cómo le va.</strong></p>
+
+            <div class="pepito-box">
+
+              <div class="pepito-head">Tu única contratación</div>
+              <p class="pepito-intro">Le pagas $250.000 al mes, todos los meses, sin subirle el sueldo. Lo que cambia es lo que él produce.</p>
+
+              <div class="pepito-year">
+                <div class="pepito-label">Año 1 · el primer día de trabajo</div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Tú aportas</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 51.7%; background: #9aa3a3;"></div></div>
+                  <span class="pepito-val" style="color: var(--text-secondary);">$250.000/mes</span>
                 </div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--accent);">Pepito produce</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 4.1%; background: var(--accent);"></div></div>
+                  <span class="pepito-val" style="color: var(--accent);">$20.000/mes</span>
+                </div>
+                <p class="pepito-cap">Recién entró. Todavía no sabe dónde queda el baño. Produce menos de lo que inviertes, y está bien: apenas está aprendiendo.</p>
               </div>
 
-              <div style="background: var(--bg); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="text-align: center;">
-                  <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 0.5rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">El momento de inflexión</div>
-                  <div style="font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">AÑO 9</div>
-                  <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">Los rendimientos alcanzan <strong style="color: #0ea5a5;">$254.550/mes</strong> <br/> Tu aporte + lo que el dinero genera = <strong style="color: #0ea5a5;">$504.550/mes</strong></div>
-                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border); font-size: 12px; color: var(--text-secondary); font-weight: 500;">Desde acá, el dinero trabaja MÁS que tú</div>
+              <div class="pepito-year">
+                <div class="pepito-label">Año 5 · ya conoce el negocio</div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Tú aportas</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 51.7%; background: #9aa3a3;"></div></div>
+                  <span class="pepito-val" style="color: var(--text-secondary);">$250.000/mes</span>
                 </div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--accent);">Pepito produce</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 24.2%; background: var(--accent);"></div></div>
+                  <span class="pepito-val" style="color: var(--accent);">$117.000/mes</span>
+                </div>
+                <p class="pepito-cap">Ya produce casi la mitad de lo que le pagas. Y tú no hiciste nada distinto a dejar pasar el tiempo.</p>
               </div>
 
-              <div style="background: var(--bg); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.5rem;">
-                <div style="text-align: center; margin-bottom: 1rem;">
-                  <div style="font-size: 13px; color: var(--text-secondary); font-weight: 500; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px;">La pregunta que casi nadie se hace</div>
-                  <div style="font-size: 14px; color: var(--text-primary); line-height: 1.7;">
-                    <span style="display: block; margin-bottom: 0.5rem;"><strong>¿Y si no me muero?</strong></span>
-                    <span style="display: block; font-size: 13px; color: var(--text-secondary);">La probabilidad de llegar a los 50 es altísima.<br/>Es, de hecho, lo más probable que te va a pasar.</span>
-                  </div>
+              <div class="pepito-year pepito-year--hito">
+                <span class="pepito-badge">ACÁ SE PONE LA 10</span>
+                <div class="pepito-label">Año 9 · te empata</div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Tú aportas</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 51.7%; background: #9aa3a3;"></div></div>
+                  <span class="pepito-val" style="color: var(--text-secondary);">$250.000/mes</span>
                 </div>
-                <div style="border-top: 0.5px solid var(--border); padding-top: 1rem; margin-top: 1rem;">
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px;">
-                    <div>
-                      <div style="color: var(--text-secondary); margin-bottom: 4px;">Ahora (año 1)</div>
-                      <div style="font-size: 18px; font-weight: 500; color: var(--text-primary);">$250K</div>
-                      <div style="font-size: 11px; color: var(--text-secondary);">es tu problema</div>
-                    </div>
-                    <div>
-                      <div style="color: var(--text-secondary); margin-bottom: 4px;">En 15 años</div>
-                      <div style="font-size: 18px; font-weight: 500; color: #0ea5a5;">$574K+</div>
-                      <div style="font-size: 11px; color: var(--text-secondary);">es tu libertad</div>
-                    </div>
-                  </div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--accent);">Pepito produce</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 51.7%; background: var(--accent);"></div></div>
+                  <span class="pepito-val" style="color: var(--accent);">$250.000/mes</span>
                 </div>
+                <p class="pepito-cap">Peso por peso, Pepito pone lo mismo que tú. De acá en adelante la empresa deja de depender de tu bolsillo.</p>
               </div>
 
-              <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-radius: 8px; font-size: 11px; color: var(--text-secondary);">
-                <strong>Base del cálculo:</strong> $250K/mes invertidos a 8% E.A. durante 15 años. Números redondeados. Los rendimientos se reinvierten (compuesto).
+              <div class="pepito-year">
+                <div class="pepito-label">Año 14 · trabaja más que tú</div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Tú aportas</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 51.7%; background: #9aa3a3;"></div></div>
+                  <span class="pepito-val" style="color: var(--text-secondary);">$250.000/mes</span>
+                </div>
+                <div class="pepito-row">
+                  <span class="pepito-name" style="color: var(--accent);">Pepito produce</span>
+                  <div class="pepito-track"><div class="pepito-fill" style="width: 100%; background: var(--accent);"></div></div>
+                  <span class="pepito-val" style="color: var(--accent);">$484.000/mes</span>
+                </div>
+                <p class="pepito-cap">Llegar a los primeros $250.000 le tomó nueve años. Sumar los siguientes $234.000 le tomó cinco años. Cada vez tarda menos.</p>
               </div>
+
+              <div class="pepito-cap-sub">
+                <div class="pepito-head">El capital de la compañía</div>
+                <p class="pepito-intro" style="border-bottom: none; padding-bottom: 0; margin-bottom: 16px;">De toda la plata que hay adentro, ¿cuánta la pusiste tú y cuánta la puso Pepito?</p>
+
+                <div class="pepito-legend">
+                  <span><span class="pepito-dot" style="background: #9aa3a3;"></span>Tu aporte</span>
+                  <span><span class="pepito-dot" style="background: var(--accent);"></span>Rendimiento de Pepito</span>
+                </div>
+
+                <div class="pepito-crow">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Año 1</span>
+                  <div class="pepito-stack"><span style="width: 96.5%; background: #9aa3a3;">96%</span><span style="width: 3.5%; background: var(--accent);"></span></div>
+                  <span class="pepito-val" style="color: var(--text-primary);">$3,1M</span>
+                </div>
+                <div class="pepito-crow">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Año 5</span>
+                  <div class="pepito-stack"><span style="width: 82.3%; background: #9aa3a3;">82%</span><span style="width: 17.7%; background: var(--accent);">18%</span></div>
+                  <span class="pepito-val" style="color: var(--text-primary);">$18,2M</span>
+                </div>
+                <div class="pepito-crow">
+                  <span class="pepito-name" style="color: var(--text-secondary);">Año 9</span>
+                  <div class="pepito-stack"><span style="width: 69.6%; background: #9aa3a3;">70%</span><span style="width: 30.4%; background: var(--accent);">30%</span></div>
+                  <span class="pepito-val" style="color: var(--text-primary);">$38,8M</span>
+                </div>
+                <div class="pepito-crow">
+                  <span class="pepito-name" style="color: var(--text-primary);">Año 14</span>
+                  <div class="pepito-stack"><span style="width: 55.8%; background: #9aa3a3;">56%</span><span style="width: 44.2%; background: var(--accent);">44%</span></div>
+                  <span class="pepito-val" style="color: var(--text-primary);">$75,3M</span>
+                </div>
+
+                <p class="pepito-cap">Al año 14 tienes $75,3 millones. De tu bolsillo salieron $42 millones. Los otros $33,3 los puso Pepito.</p>
+              </div>
+
+              <div class="pepito-note">
+                <p>El crecimiento siempre fue exponencial. Lo que pasa en el año 9 es que por fin se nota. Por eso la mayoría abandona antes de llegar acá.</p>
+              </div>
+
+              <p class="pepito-foot">Ejercicio ilustrativo: $250.000 mensuales a 8% E.A., con rendimientos reinvertidos. En la práctica Pepito no produce igual todos los meses — hay fondos de renta variable donde el rendimiento sube y baja, y alternativas de rentabilidad fija donde la tasa se pacta desde el principio. Lo que no cambia es el efecto del tiempo. Cifras redondeadas.</p>
+
             </div>
+
+            <h3>EL TIEMPO VA A PASAR IGUAL</h3>
+
+            <p>Lo mejor de esta empresa es que nunca tuviste que lidiar con una contratación, ni con un trámite, ni con una renuncia. Solo tuviste que esperar.</p>
+
+            <p>Y ahí está el punto: el tiempo va a pasar contrates a Pepito o no. Dentro de quince años vas a tener cuarenta y tantos de cualquier forma. Lo único que cambia es si para ese momento tienes a alguien produciendo para ti.</p>
+
+            <p>Porque tener un Pepito es lo que te evita pasarte la vida siendo el Pepito de alguien más.</p>
+
+            <p><strong>Y al final, esos $250.000 al mes nunca te impidieron vivir.</strong></p>
           </div>
 
         </div>
