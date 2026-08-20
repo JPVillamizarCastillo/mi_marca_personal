@@ -3,91 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reflexiones Financieras | Juan Pablo Villamizar</title>
+  <title>Política de Tratamiento de Datos Personales | JP Villamizar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ===== Reflexiones Financieras (página dedicada) ===== */
-    .reflexiones-page {
-      padding: 100px 0 140px;
+    /* ===== Política de Tratamiento de Datos (página legal) ===== */
+    .legal-page {
+      padding: 100px 0 100px;
     }
 
-    .reflexion-filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 48px;
+    .legal-content-wrap {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .filter-btn {
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
+    .legal-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .legal-content {
+      font-size: 1.05rem;
+      line-height: 1.75;
       color: var(--text-secondary);
-      background-color: transparent;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 10px 22px;
-      cursor: pointer;
-      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
     }
 
-    .filter-btn:hover {
-      border-color: rgba(217, 255, 63, 0.35);
+    .legal-content p {
+      margin-bottom: 18px;
+    }
+
+    .legal-content h2 {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
       color: var(--text-primary);
     }
 
-    .filter-btn.is-active {
-      border-color: var(--accent);
-      color: var(--accent);
-      background-color: rgba(217, 255, 63, 0.08);
+    .legal-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.6rem;
     }
 
-    .reflexiones-pagination {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      margin-top: 48px;
+    .legal-content ol,
+    .legal-content ul {
+      margin: 0 0 18px 1.4rem;
     }
 
-    .load-more-btn {
-      padding: 14px 32px;
-      font-size: 0.95rem;
-    }
-
-    .reflexiones-count {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      opacity: 0.8;
+    .legal-content li {
+      margin-bottom: 8px;
     }
 
     @media (max-width: 600px) {
-      .reflexiones-page {
-        padding: 80px 0 100px;
+      .legal-page {
+        padding: 80px 0 80px;
       }
 
-      .reflexion-filters {
-        flex-direction: column;
-        align-items: stretch;
+      .legal-title {
+        font-size: 1.7rem;
       }
-
-      .filter-btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .load-more-btn {
-        width: 100%;
-      }
-    }
-
-    .reflexion-card {
-      cursor: pointer;
     }
   </style>
 </head>
@@ -117,25 +106,49 @@
   </header>
 
   <main>
-    <section class="reflexiones-financieras reflexiones-page" id="reflexiones-financieras">
+    <section class="legal-page">
       <div class="container">
-        <div class="reflexiones__header">
-          <h1 class="reflexiones__title">Reflexiones Financieras</h1>
-          <p class="reflexiones__subtitle">Estrategia antes que producto</p>
-        </div>
+        <div class="legal-content-wrap">
+          <h1 class="legal-title">Política de Tratamiento de Datos Personales</h1>
 
-        <div class="reflexion-filters" id="reflexionFilters">
-          <button type="button" class="filter-btn is-active" data-filter="todos">Todos</button>
-          <button type="button" class="filter-btn" data-filter="psicologia">Psicología del Dinero</button>
-          <button type="button" class="filter-btn" data-filter="estrategia">Estrategia Patrimonial</button>
-          <button type="button" class="filter-btn" data-filter="experiencia">Experiencia Personal</button>
-        </div>
+          <div class="legal-content">
+            <h2>1. Objetivo</h2>
+            <p>Establecer los criterios para la recolección, almacenamiento, uso y tratamiento de los datos personales recolectados por Juan Pablo Villamizar Castillo a través del sitio web y el formulario de contacto disponibles en mimarcapersonaljp.vercel.app.</p>
 
-        <div class="reflexiones__list" id="reflexionesList"></div>
+            <h2>2. Alcance</h2>
+            <p>Esta política aplica a toda la información personal recolectada mediante el formulario de contacto de este sitio (nombre completo, perfil de LinkedIn, teléfono, correo electrónico y mensaje).</p>
 
-        <div class="reflexiones-pagination">
-          <button type="button" class="btn btn--outline load-more-btn" id="loadMoreBtn">Cargar más reflexiones</button>
-          <p class="reflexiones-count" id="reflexionesCount">Mostrando 0 de 0 reflexiones</p>
+            <h2>3. Responsable del tratamiento</h2>
+            <p>Juan Pablo Villamizar Castillo, identificado con cédula de ciudadanía No. 1.005.024.598, con domicilio en Cúcuta, Colombia. Correo electrónico: jpvillamizar@fp.skandia.com.co. Teléfono: +57 321 565 0782.</p>
+
+            <h2>4. Tratamiento y finalidad</h2>
+
+            <h3>a) Contacto y agendamiento</h3>
+            <p>Contactar al Titular a través de los medios suministrados (teléfono y/o correo electrónico) con el fin de coordinar y agendar una reunión inicial de asesoría financiera. Si el Titular no responde en un primer intento, el Responsable podrá reintentar el contacto durante un período de dos (2) meses desde la fecha de recolección del dato. Transcurrido este plazo sin lograr contacto efectivo, el dato será eliminado.</p>
+
+            <h3>b) Continuidad del proceso comercial con Skandia</h3>
+            <p>Si, como resultado de la reunión inicial, el Titular decide continuar un proceso comercial (adquisición de productos o servicios financieros, de seguros, de inversión o de pensiones), el Responsable —en su calidad de asesor vinculado a Skandia Planeación Financiera S.A.— podrá remitir los datos de contacto del Titular para dar continuidad a dicho proceso. A partir de ese momento, el tratamiento de la información quedará sujeto a la <a href="https://www.skandia.co/politica-de-tratamiento-de-informacion" target="_blank" rel="noopener" class="inline-link">Política de Tratamiento de Datos Personales de Skandia</a>.</p>
+
+            <h2>5. Tratamiento de datos sensibles</h2>
+            <p>No aplica. El formulario de este sitio no recolecta datos personales sensibles.</p>
+
+            <h2>6. Derechos del Titular</h2>
+            <p>Como titular de sus datos personales, usted tiene derecho a:</p>
+            <ol type="a">
+              <li>Acceder de forma gratuita a los datos que hayan sido objeto de tratamiento.</li>
+              <li>Conocer, actualizar y rectificar su información frente a datos parciales, inexactos o incompletos.</li>
+              <li>Solicitar prueba de la autorización otorgada.</li>
+              <li>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la normatividad vigente.</li>
+              <li>Revocar la autorización y/o solicitar la supresión del dato, salvo deber legal o contractual que impida eliminarlo.</li>
+              <li>Abstenerse de responder preguntas sobre datos sensibles (no aplica en este formulario, se incluye por norma).</li>
+            </ol>
+
+            <h2>7. Atención de peticiones, consultas y reclamos</h2>
+            <p>Las solicitudes pueden dirigirse a jpvillamizar@fp.skandia.com.co. Término máximo de respuesta: quince (15) días hábiles desde el día siguiente a la recepción, prorrogables ocho (8) días hábiles adicionales informando el motivo.</p>
+
+            <h2>8. Vigencia</h2>
+            <p>Esta política entra en vigencia en la fecha de su publicación en este sitio web: 20 de agosto de 2026. Los datos se conservarán mientras exista una posibilidad razonable de agendar la reunión inicial (máximo dos meses según la finalidad a), o mientras continúe el proceso comercial derivado de la finalidad b). El Titular puede solicitar supresión anticipada en cualquier momento.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -297,85 +310,6 @@
         submitBtn.disabled = false;
       });
     });
-
-    /* ===== Reflexiones Financieras: datos, filtros y paginación ===== */
-    const reflexionesData = [
-      {
-        id: '2026-08-07',
-        category: 'estrategia',
-        badge: 'Estrategia Patrimonial',
-        title: 'El orden en que haces las inversiones define si llegas o si te hundes',
-        excerpt: 'Quieres tu lugar propio. Es legítimo. Pero casi nadie llega de la forma correcta: primero emoción, después deuda. Los que saben hacen lo opuesto: acumulan primero, compran con poder.',
-        date: '07 de agosto, 2026',
-        dateSortValue: '2026-08-07',
-        url: 'reflexion-engorde.html'
-      },
-      {
-        id: '2026-08-13',
-        category: 'psicologia',
-        badge: 'Psicología del Dinero',
-        title: '¿Y si me muero mañana y no disfruté?',
-        excerpt: 'Es la pregunta que más me hacen en las asesorías. El problema no es esa pregunta: es que casi nadie se hace la que sigue. ¿Y si NO me muero? Ahí está el error de cálculo que te puede costar 15 años.',
-        date: '13 de agosto, 2026',
-        dateSortValue: '2026-08-13',
-        url: 'reflexion-bola-de-nieve.html'
-      }
-    ];
-
-    const PAGE_SIZE = 6;
-
-    // Ordenar reflexiones por fecha (más reciente primero)
-    reflexionesData.sort((a, b) => new Date(b.dateSortValue) - new Date(a.dateSortValue));
-
-    let currentFilter = 'todos';
-    let visibleCount = PAGE_SIZE;
-
-    const reflexionesListEl = document.getElementById('reflexionesList');
-    const reflexionesCountEl = document.getElementById('reflexionesCount');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-
-    function getFilteredReflexiones() {
-      if (currentFilter === 'todos') return reflexionesData;
-      return reflexionesData.filter((r) => r.category === currentFilter);
-    }
-
-    function cardTemplate(r) {
-      return `
-        <a href="${r.url}" class="reflexion-card" role="button">
-          <span class="reflexion-card__badge">${r.badge}</span>
-          <h3 class="reflexion-card__title">${r.title}</h3>
-          <p class="reflexion-card__excerpt">${r.excerpt}</p>
-          <time class="reflexion-card__date">${r.date}</time>
-        </a>
-      `;
-    }
-
-    function renderReflexiones() {
-      const filtered = getFilteredReflexiones();
-      const visible = filtered.slice(0, visibleCount);
-
-      reflexionesListEl.innerHTML = visible.map((r) => cardTemplate(r)).join('');
-      reflexionesCountEl.textContent = `Mostrando ${visible.length} de ${filtered.length} reflexiones`;
-      loadMoreBtn.style.display = visibleCount >= filtered.length ? 'none' : 'inline-flex';
-    }
-
-    filterBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        currentFilter = btn.dataset.filter;
-        visibleCount = PAGE_SIZE;
-        renderReflexiones();
-      });
-    });
-
-    loadMoreBtn.addEventListener('click', () => {
-      visibleCount += PAGE_SIZE;
-      renderReflexiones();
-    });
-
-    renderReflexiones();
   </script>
 
 </body>
